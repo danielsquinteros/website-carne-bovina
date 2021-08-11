@@ -1,0 +1,194 @@
+@mixin base-font-primary {
+    font-family: $font-primary;
+    // letter-spacing: -0.01em;
+    font-style: normal;
+}
+
+@mixin font-weight-size($level, $font-weight){
+
+    //FONTS SIZES TITLE
+    @if $level == 1 {
+        font-size: 3.75rem;
+        line-height: 4.75rem;
+     
+    } @else if $level == 2 {
+        font-size: 3rem;
+        line-height: 3.5625rem;
+        @include sm(){
+            font-size: 2.125rem;
+            line-height: 2.625rem;
+        }
+    } @else if $level == 3 {
+        font-size: 2rem;
+        line-height: 2.375rem;
+
+    } @else if $level == 4 {
+        font-size: 1.375rem;
+        line-height: 1.75rem;
+        @include xl(){
+            font-size: 1.125rem;
+            line-height: 1.4375rem;
+        }
+        @include md(){
+            font-size: 1rem;
+            line-height: 1.2375rem;
+        }
+    //FONTS SIZES BODY
+    } @else if $level == m {
+        font-size: 1.125rem;
+        line-height: 1.4375rem;
+
+    } @else if $level == s {
+        font-size: 1rem;
+        line-height: 1.25rem;
+
+    } @else if $level == xs {
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+
+    } 
+    
+    //FONT WEIGHT
+    @if $font-weight == light {
+        font-weight: 300;
+    }
+    @else if $font-weight == medium {
+        font-weight: 500;
+    }
+    @else if $font-weight == bold {
+        font-weight: bold;
+    }
+}
+
+/* ========================================================================================= */
+/* TITLES */
+/* ========================================================================================= */
+
+.o-font-primary-title{
+    @include base-font-primary(); 
+
+    /* LEVEL 1 */
+    &-l1--light{
+        @extend .o-font-primary-title;
+        @include font-weight-size(1,light);
+    }
+    &-l1--medium{
+        @extend .o-font-primary-title;
+        @include font-weight-size(1,medium);
+    }
+    &-l1--bold{
+        @extend .o-font-primary-title;
+        @include font-weight-size(1,bold);
+    }
+
+    
+    /* LEVEL 2 */   
+    &-l2--light{
+        @extend .o-font-primary-title;
+        @include font-weight-size(2,light);
+    }
+    &-l2--medium{
+        @extend .o-font-primary-title;
+        @include font-weight-size(2,medium);
+    }
+    &-l2--bold{
+        @extend .o-font-primary-title;
+        @include font-weight-size(2,bold);
+    }
+
+    /* LEVEL 3 */   
+    &-l3--light{
+        @extend .o-font-primary-title;
+        @include font-weight-size(3,light);
+    }
+    &-l3--medium{
+        @extend .o-font-primary-title;
+        @include font-weight-size(3,medium);
+    }
+    &-l3--bold{
+        @extend .o-font-primary-title;
+        @include font-weight-size(3,bold);
+    }
+
+    /* LEVEL 4 */   
+    &-l4--light{
+        @extend .o-font-primary-title;
+        @include font-weight-size(4,light);
+    }
+    &-l4--medium{
+        @extend .o-font-primary-title;
+        @include font-weight-size(4,medium);
+    }
+    &-l4--bold{
+        @extend .o-font-primary-title;
+        @include font-weight-size(4,bold);
+    }
+}
+/* ========================================================================================= */
+/* END TITLES */
+/* ========================================================================================= */
+
+/* ========================================================================================= */
+/* BODYS */
+/* ========================================================================================= */
+
+
+.o-font-primary-body{
+    @include base-font-primary(); 
+
+    /* LEVEL MEDIUM */
+    &-m--light{
+        @extend .o-font-primary-body;
+        @include font-weight-size(m,light);
+    }
+    &-m--medium{
+        @extend .o-font-primary-body;
+        @include font-weight-size(m,medium);
+
+        &--link{
+            @extend .o-font-primary-body;
+            @extend .o-font-primary-body-m--medium;
+            text-decoration: underline;
+        }
+    }
+    &-m--bold{
+        @extend .o-font-primary-body;
+        @include font-weight-size(m,bold);
+    }
+
+    
+    /* LEVEL SMALL */   
+    &-s--light{
+        @extend .o-font-primary-body;
+        @include font-weight-size(s,light);
+    }
+    &-s--medium{
+        @extend .o-font-primary-body;
+        @include font-weight-size(s,medium);
+    }
+    &-s--bold{
+        @extend .o-font-primary-body;
+        @include font-weight-size(s,bold);
+    }
+
+    /* LEVEL EXTRA SMALL */   
+    &-xs--light{
+        @extend .o-font-primary-body;
+        @include font-weight-size(xs,light);
+    }
+    &-xs--medium{
+        @extend .o-font-primary-body;
+        @include font-weight-size(xs,medium);
+    }
+    &-xs--bold{
+        @extend .o-font-primary-body;
+        @include font-weight-size(xs,bold);
+    }
+
+}
+
+
+/* ========================================================================================= */
+/* END BODYS */
+/* ========================================================================================= */
+

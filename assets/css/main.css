@@ -1,0 +1,949 @@
+/* ========================================================================================= */
+/* SETTINGS */
+/* ========================================================================================= */
+:root {
+  --color-primary: #12171E;
+  --color-steel-blue: #536075;
+  --color-secondary: #F6F9FC;
+  --color-rust:#FF7646;
+  --color-disabled:#AEB6C3;
+  --color-white: #FFFFFF;
+  --color-pale-green:#62FF7D;
+  --color-red:#F84545;
+  --color-light-blue:#A1E7FC;
+  --color-yellow:#FFD460;
+}
+
+/* ========================================================================================= */
+/* END SETTINGS */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* TOOLS */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* TOOLS - FUNCTIONS */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* END TOOLS - FUNCTIONS */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* TOOLS - MIXINS */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* END TOOLS - MIXINS */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* END TOOLS */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* GENERIC */
+/* ========================================================================================= */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Eudoxus Sans", "Poppins";
+  font-style: normal;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background: var(--color-white);
+  height: auto;
+}
+
+header, section, article, nav, footer, aside, figure, form {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* ========================================================================================= */
+/* END GENERIC */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* KEYFRAMES */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* END KEYFRAMES */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* OBJECTS */
+/* ========================================================================================= */
+.o-container {
+  width: 85%;
+  max-width: 1600px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ========================================================================================= */
+/* TITLES */
+/* ========================================================================================= */
+.o-font-primary-title, .o-font-primary-title-l1--light, .o-font-primary-title-l1--medium, .o-font-primary-title-l1--bold, .o-font-primary-title-l2--light, .o-font-primary-title-l2--medium, .o-font-primary-title-l2--bold, .o-font-primary-title-l3--light, .o-font-primary-title-l3--medium, .o-font-primary-title-l3--bold, .o-font-primary-title-l4--light, .o-font-primary-title-l4--medium, .o-font-primary-title-l4--bold {
+  font-family: "Eudoxus Sans", "Poppins";
+  font-style: normal;
+  /* LEVEL 1 */
+  /* LEVEL 2 */
+  /* LEVEL 3 */
+  /* LEVEL 4 */
+}
+
+.o-font-primary-title-l1--light {
+  font-size: 3.75rem;
+  line-height: 4.75rem;
+  font-weight: 300;
+}
+
+.o-font-primary-title-l1--medium {
+  font-size: 3.75rem;
+  line-height: 4.75rem;
+  font-weight: 500;
+}
+
+.o-font-primary-title-l1--bold {
+  font-size: 3.75rem;
+  line-height: 4.75rem;
+  font-weight: bold;
+}
+
+.o-font-primary-title-l2--light {
+  font-size: 3rem;
+  line-height: 3.5625rem;
+  font-weight: 300;
+}
+
+@media (max-width: 576px) {
+  .o-font-primary-title-l2--light {
+    font-size: 2.125rem;
+    line-height: 2.625rem;
+  }
+}
+
+.o-font-primary-title-l2--medium {
+  font-size: 3rem;
+  line-height: 3.5625rem;
+  font-weight: 500;
+}
+
+@media (max-width: 576px) {
+  .o-font-primary-title-l2--medium {
+    font-size: 2.125rem;
+    line-height: 2.625rem;
+  }
+}
+
+.o-font-primary-title-l2--bold {
+  font-size: 3rem;
+  line-height: 3.5625rem;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .o-font-primary-title-l2--bold {
+    font-size: 2.125rem;
+    line-height: 2.625rem;
+  }
+}
+
+.o-font-primary-title-l3--light {
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: 300;
+}
+
+.o-font-primary-title-l3--medium {
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: 500;
+}
+
+.o-font-primary-title-l3--bold {
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: bold;
+}
+
+.o-font-primary-title-l4--light {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  font-weight: 300;
+}
+
+@media (max-width: 1200px) {
+  .o-font-primary-title-l4--light {
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .o-font-primary-title-l4--light {
+    font-size: 1rem;
+    line-height: 1.2375rem;
+  }
+}
+
+.o-font-primary-title-l4--medium {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .o-font-primary-title-l4--medium {
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .o-font-primary-title-l4--medium {
+    font-size: 1rem;
+    line-height: 1.2375rem;
+  }
+}
+
+.o-font-primary-title-l4--bold {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+  .o-font-primary-title-l4--bold {
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .o-font-primary-title-l4--bold {
+    font-size: 1rem;
+    line-height: 1.2375rem;
+  }
+}
+
+/* ========================================================================================= */
+/* END TITLES */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* BODYS */
+/* ========================================================================================= */
+.o-font-primary-body, .o-font-primary-body-m--light, .o-font-primary-body-m--medium, .o-font-primary-body-m--medium--link, .o-font-primary-body-m--bold, .o-font-primary-body-s--light, .o-font-primary-body-s--medium, .o-font-primary-body-s--bold, .o-font-primary-body-xs--light, .o-font-primary-body-xs--medium, .o-font-primary-body-xs--bold {
+  font-family: "Eudoxus Sans", "Poppins";
+  font-style: normal;
+  /* LEVEL MEDIUM */
+  /* LEVEL SMALL */
+  /* LEVEL EXTRA SMALL */
+}
+
+.o-font-primary-body-m--light {
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  font-weight: 300;
+}
+
+.o-font-primary-body-m--medium, .o-font-primary-body-m--medium--link {
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  font-weight: 500;
+}
+
+.o-font-primary-body-m--medium--link {
+  text-decoration: underline;
+}
+
+.o-font-primary-body-m--bold {
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  font-weight: bold;
+}
+
+.o-font-primary-body-s--light {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+}
+
+.o-font-primary-body-s--medium {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.o-font-primary-body-s--bold {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+}
+
+.o-font-primary-body-xs--light {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 300;
+}
+
+.o-font-primary-body-xs--medium {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 500;
+}
+
+.o-font-primary-body-xs--bold {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: bold;
+}
+
+/* ========================================================================================= */
+/* END BODYS */
+/* ========================================================================================= */
+.o-color--primary {
+  color: var(--color-primary);
+}
+
+.o-color--secondary {
+  color: var(--color-secondary);
+}
+
+.o-color--disabled {
+  color: var(--color-disabled);
+}
+
+.o-color--steel-blue {
+  color: var(--color-steel-blue);
+}
+
+.o-color--rust {
+  color: var(--color-rust);
+}
+
+.o-color--red {
+  color: var(--color-red);
+}
+
+.o-color--pale-green {
+  color: var(--color-pale-green);
+}
+
+.o-color--light-blue {
+  color: var(--color-light-blue);
+}
+
+.o-color--yellow {
+  color: var(--color-yellow);
+}
+
+.o-color--white {
+  color: var(--color-white);
+}
+
+.o-divider, .o-divider-strong--primary, .o-divider-light--disabled, .o-divider-light--primary {
+  width: 100%;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.o-divider-strong--primary {
+  margin-top: 0px;
+  border: 1px solid var(--color-primary);
+}
+
+.o-divider-light--disabled {
+  border: 0.7px solid var(--color-disabled);
+}
+
+.o-divider-light--primary {
+  border: 0.7px solid var(--color-primary);
+}
+
+.o-background--primary {
+  background: var(--color-primary);
+}
+
+.o-background--secondary {
+  background: var(--color-secondary);
+}
+
+.o-background--disabled {
+  background: var(--color-disabled);
+}
+
+.o-background--steel-blue {
+  background: var(--color-steel-blue);
+}
+
+.o-background--rust {
+  background: var(--color-rust);
+}
+
+.o-background--red {
+  background: var(--color-red);
+}
+
+.o-background--pale-green {
+  background: var(--color-pale-green);
+}
+
+.o-background--light-blue {
+  background: var(--color-light-blue);
+}
+
+.o-background--yellow {
+  background: var(--color-yellow);
+}
+
+.o-background--white {
+  background: var(--color-white);
+}
+
+.o-width-height--10 {
+  width: 10px;
+  height: 10px;
+}
+
+.o-width-height--12 {
+  width: 12px;
+  height: 12px;
+}
+
+.o-width-height--14 {
+  width: 14px;
+  height: 14px;
+}
+
+.o-width-height--16 {
+  width: 16px;
+  height: 16px;
+}
+
+.o-width-height--18 {
+  width: 18px;
+  height: 18px;
+}
+
+.o-width-height--20 {
+  width: 20px;
+  height: 20px;
+}
+
+.o-width-height--22 {
+  width: 22px;
+  height: 22px;
+}
+
+.o-width-height--24 {
+  width: 24px;
+  height: 24px;
+}
+
+.o-width-height--26 {
+  width: 26px;
+  height: 26px;
+}
+
+.o-height--10 {
+  height: 10px;
+}
+
+.o-height--12 {
+  height: 12px;
+}
+
+.o-height--14 {
+  height: 14px;
+}
+
+.o-height--16 {
+  height: 16px;
+}
+
+.o-height--18 {
+  height: 18px;
+}
+
+.o-height--20 {
+  height: 20px;
+}
+
+.o-height--22 {
+  height: 22px;
+}
+
+.o-height--24 {
+  height: 24px;
+}
+
+.o-height--26 {
+  height: 26px;
+}
+
+.o-width--10 {
+  width: 10px;
+}
+
+.o-width--12 {
+  width: 12px;
+}
+
+.o-width--14 {
+  width: 14px;
+}
+
+.o-width--16 {
+  width: 16px;
+}
+
+.o-width--18 {
+  width: 18px;
+}
+
+.o-width--20 {
+  width: 20px;
+}
+
+.o-width--22 {
+  width: 22px;
+}
+
+.o-width--24 {
+  width: 24px;
+}
+
+.o-width--26 {
+  width: 26px;
+}
+
+.o-text-align--start {
+  text-align: start;
+}
+
+.o-text-align--center {
+  text-align: center;
+}
+
+.o-text-align--end {
+  text-align: end;
+}
+
+/* ============================================================ */
+/* END OBJECTS */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* COMPONENTS */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* END COMPONENTS */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* EXTERNAL */
+/* ========================================================================================= */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+  ========================================================================== */
+/**
+* 1. Correct the line height in all browsers.
+* 2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+    ========================================================================== */
+/**
+  * Remove the margin in all browsers.
+  */
+body {
+  margin: 0;
+}
+
+/**
+  * Render the `main` element consistently in IE.
+  */
+main {
+  display: block;
+}
+
+/**
+  * Correct the font size and margin on `h1` elements within `section` and
+  * `article` contexts in Chrome, Firefox, and Safari.
+  */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+    ========================================================================== */
+/**
+  * 1. Add the correct box sizing in Firefox.
+  * 2. Show the overflow in Edge and IE.
+  */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+  * 1. Correct the inheritance and scaling of font size in all browsers.
+  * 2. Correct the odd `em` font sizing in all browsers.
+  */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+    ========================================================================== */
+/**
+  * Remove the gray background on active links in IE 10.
+  */
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/**
+  * 1. Remove the bottom border in Chrome 57-
+  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+  */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+  * Add the correct font weight in Chrome, Edge, and Safari.
+  */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+  * 1. Correct the inheritance and scaling of font size in all browsers.
+  * 2. Correct the odd `em` font sizing in all browsers.
+  */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+  * Add the correct font size in all browsers.
+  */
+small {
+  font-size: 80%;
+}
+
+/**
+  * Prevent `sub` and `sup` elements from affecting the line height in
+  * all browsers.
+  */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+    ========================================================================== */
+/**
+  * Remove the border on images inside links in IE 10.
+  */
+img {
+  border-style: none;
+}
+
+/* Forms
+    ========================================================================== */
+/**
+  * 1. Change the font styles in all browsers.
+  * 2. Remove the margin in Firefox and Safari.
+  */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+  * Show the overflow in IE.
+  * 1. Show the overflow in Edge.
+  */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+  * Remove the inheritance of text transform in Edge, Firefox, and IE.
+  * 1. Remove the inheritance of text transform in Firefox.
+  */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+  * Correct the inability to style clickable types in iOS and Safari.
+  */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+  * Remove the inner border and padding in Firefox.
+  */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+  * Restore the focus styles unset by the previous rule.
+  */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+  * Correct the padding in Firefox.
+  */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+  * 1. Correct the text wrapping in Edge and IE.
+  * 2. Correct the color inheritance from `fieldset` elements in IE.
+  * 3. Remove the padding so developers are not caught out when they zero out
+  *    `fieldset` elements in all browsers.
+  */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+  */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+  * Remove the default vertical scrollbar in IE 10+.
+  */
+textarea {
+  overflow: auto;
+}
+
+/**
+  * 1. Add the correct box sizing in IE 10.
+  * 2. Remove the padding in IE 10.
+  */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+  * Correct the cursor style of increment and decrement buttons in Chrome.
+  */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+  * 1. Correct the odd appearance in Chrome and Safari.
+  * 2. Correct the outline style in Safari.
+  */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+  * Remove the inner padding in Chrome and Safari on macOS.
+  */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+  * 1. Correct the inability to style clickable types in iOS and Safari.
+  * 2. Change font properties to `inherit` in Safari.
+  */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+    ========================================================================== */
+/*
+  * Add the correct display in Edge, IE 10+, and Firefox.
+  */
+details {
+  display: block;
+}
+
+/*
+  * Add the correct display in all browsers.
+  */
+summary {
+  display: list-item;
+}
+
+/* Misc
+    ========================================================================== */
+/**
+  * Add the correct display in IE 10+.
+  */
+template {
+  display: none;
+}
+
+/**
+  * Add the correct display in IE 10.
+  */
+[hidden] {
+  display: none;
+}
+
+select {
+  /* styling */
+  background-color: white;
+  border: thin solid blue;
+  border-radius: 0px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  /* reset */
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* ========================================================================================= */
+/* END EXTERNAL */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* UTILITIES */
+/* ========================================================================================= */
+.u-none {
+  display: none !important;
+}
+
+@media (min-width: 1101px) {
+  .u-none\@md {
+    display: none !important;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 1100px) {
+  .u-none\@sm {
+    display: none !important;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 500px) {
+  .u-none\@xs {
+    display: none !important;
+  }
+}
+
+@media print {
+  .u-none\@print {
+    display: none !important;
+  }
+}
+
+/* ========================================================================================= */
+/* END UTILITIES */
+/* ========================================================================================= */
+/*# sourceMappingURL=main.css.map */
