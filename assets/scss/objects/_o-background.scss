@@ -1,32 +1,5 @@
-.o-background{
-    &--primary{
-        background: var(--color-primary);
-    }
-    &--secondary{
-        background: var(--color-secondary);
-    }
-    &--disabled{
-        background: var(--color-disabled);
-    }
-    &--steel-blue{
-        background: var(--color-steel-blue);
-    }
-    &--rust{
-        background: var(--color-rust);
-    }
-    &--red{
-        background: var(--color-red);
-    }
-    &--pale-green{
-        background: var(--color-pale-green);
-    }
-    &--light-blue{
-        background: var(--color-light-blue);
-    }
-    &--yellow{
-        background: var(--color-yellow);
-    }
-    &--white{
-        background: var(--color-white);
+@each $nameColor, $color in $colors{
+    .o-background--#{$nameColor}{
+        background: var(--color-#{$nameColor})
     }
 }

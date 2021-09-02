@@ -3,7 +3,7 @@
 This template uses the BEMIT methodology complemented with SASS.
 
 The main.css.map file is automatically generated in:
-> assets / main.css.map
+> assets / main.css
 
 
 # Fonts
@@ -11,7 +11,7 @@ The main.css.map file is automatically generated in:
 The font sizes are described in the following table:
 
 
-|Select Font |Priority |Level  |Abbreviation|Size in PX  |Change Weight in: |
+|SelectFont |Priority |Level  |Abbreviation|Size in PX  |Change Weight in: |
 |--|---|--|----|--|--|
 | ***/_o-font.scss line #2***|| | | | ***/_o-font.scss line #51***|
 |Primary| Title|Level 1 |l1|60px          | light
@@ -50,3 +50,17 @@ o --- font-secondary --- body --- m --- bold
 ```
 o-font-secondary-body-m--bold
 ```
+
+# Media Queries
+
+These media queries are located up to an; Iphone 5 = **320px wide**.
+  It is important to consider that the media queries are for **desktop first**.
+
+|Break Points | PX |
+|--|---|
+|XL| 1200|
+|LG| 1024|
+|MD| 768|
+|SM|576|
+|XS|480|
+|XXS|320|

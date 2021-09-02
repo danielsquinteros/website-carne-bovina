@@ -1,17 +1,23 @@
 /* ========================================================================================= */
 /* SETTINGS */
 /* ========================================================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap");
+/*
+IMPORTANT!
+There should always be a color that is called primary and disabled
+SEE OBJECTS/O-DIVIDER
+*/
 :root {
-  --color-primary: #12171E;
-  --color-steel-blue: #536075;
-  --color-secondary: #F6F9FC;
-  --color-rust:#FF7646;
+  --color-ocean:#75DDDD;
+  --color-steel-ocean:#508891;
+  --color-primary:#172A3A;
+  --color-secondary:#09BC8A;
+  --color-white:#ffffff;
+  --color-dark:#0E1923;
   --color-disabled:#AEB6C3;
-  --color-white: #FFFFFF;
-  --color-pale-green:#62FF7D;
-  --color-red:#F84545;
+  --color-blue:#0067FA;
   --color-light-blue:#A1E7FC;
-  --color-yellow:#FFD460;
+  --color-light-red:#F56476;
 }
 
 /* ========================================================================================= */
@@ -44,7 +50,7 @@
 }
 
 html, body {
-  font-family: "Eudoxus Sans", "Poppins";
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-size: 16px;
   margin: 0;
@@ -90,7 +96,7 @@ ol, ul {
 /* TITLES */
 /* ========================================================================================= */
 .o-font-primary-title, .o-font-primary-title-l1--light, .o-font-primary-title-l1--medium, .o-font-primary-title-l1--bold, .o-font-primary-title-l2--light, .o-font-primary-title-l2--medium, .o-font-primary-title-l2--bold, .o-font-primary-title-l3--light, .o-font-primary-title-l3--medium, .o-font-primary-title-l3--bold, .o-font-primary-title-l4--light, .o-font-primary-title-l4--medium, .o-font-primary-title-l4--bold {
-  font-family: "Eudoxus Sans", "Poppins";
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   /* LEVEL 1 */
   /* LEVEL 2 */
@@ -239,12 +245,13 @@ ol, ul {
 /* ========================================================================================= */
 /* BODYS */
 /* ========================================================================================= */
-.o-font-primary-body, .o-font-primary-body-m--light, .o-font-primary-body-m--medium, .o-font-primary-body-m--medium--link, .o-font-primary-body-m--bold, .o-font-primary-body-s--light, .o-font-primary-body-s--medium, .o-font-primary-body-s--bold, .o-font-primary-body-xs--light, .o-font-primary-body-xs--medium, .o-font-primary-body-xs--bold {
-  font-family: "Eudoxus Sans", "Poppins";
+.o-font-primary-body, .o-font-primary-body-m--light, .o-font-primary-body-m--medium, .o-font-primary-body-m--medium--link, .o-font-primary-body-m--bold, .o-font-primary-body-s--light, .o-font-primary-body-s--medium, .o-font-primary-body-s--bold, .o-font-primary-body-xs--light, .o-font-primary-body-xs--medium, .o-font-primary-body-xs--bold, .o-font-primary-body-xxs--light, .o-font-primary-body-xxs--medium, .o-font-primary-body-xxs--bold {
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   /* LEVEL MEDIUM */
   /* LEVEL SMALL */
   /* LEVEL EXTRA SMALL */
+  /* LEVEL EXTRA EXTRA SMALL */
 }
 
 .o-font-primary-body-m--light {
@@ -305,9 +312,35 @@ ol, ul {
   font-weight: bold;
 }
 
+.o-font-primary-body-xxs--light {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  font-weight: 300;
+}
+
+.o-font-primary-body-xxs--medium {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  font-weight: 500;
+}
+
+.o-font-primary-body-xxs--bold {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  font-weight: bold;
+}
+
 /* ========================================================================================= */
 /* END BODYS */
 /* ========================================================================================= */
+.o-color--ocean {
+  color: var(--color-ocean);
+}
+
+.o-color--steel-ocean {
+  color: var(--color-steel-ocean);
+}
+
 .o-color--primary {
   color: var(--color-primary);
 }
@@ -316,36 +349,28 @@ ol, ul {
   color: var(--color-secondary);
 }
 
+.o-color--white {
+  color: var(--color-white);
+}
+
+.o-color--dark {
+  color: var(--color-dark);
+}
+
 .o-color--disabled {
   color: var(--color-disabled);
 }
 
-.o-color--steel-blue {
-  color: var(--color-steel-blue);
-}
-
-.o-color--rust {
-  color: var(--color-rust);
-}
-
-.o-color--red {
-  color: var(--color-red);
-}
-
-.o-color--pale-green {
-  color: var(--color-pale-green);
+.o-color--blue {
+  color: var(--color-blue);
 }
 
 .o-color--light-blue {
   color: var(--color-light-blue);
 }
 
-.o-color--yellow {
-  color: var(--color-yellow);
-}
-
-.o-color--white {
-  color: var(--color-white);
+.o-color--light-red {
+  color: var(--color-light-red);
 }
 
 .o-divider, .o-divider-strong--primary, .o-divider-light--disabled, .o-divider-light--primary {
@@ -367,6 +392,14 @@ ol, ul {
   border: 0.7px solid var(--color-primary);
 }
 
+.o-background--ocean {
+  background: var(--color-ocean);
+}
+
+.o-background--steel-ocean {
+  background: var(--color-steel-ocean);
+}
+
 .o-background--primary {
   background: var(--color-primary);
 }
@@ -375,46 +408,33 @@ ol, ul {
   background: var(--color-secondary);
 }
 
+.o-background--white {
+  background: var(--color-white);
+}
+
+.o-background--dark {
+  background: var(--color-dark);
+}
+
 .o-background--disabled {
   background: var(--color-disabled);
 }
 
-.o-background--steel-blue {
-  background: var(--color-steel-blue);
-}
-
-.o-background--rust {
-  background: var(--color-rust);
-}
-
-.o-background--red {
-  background: var(--color-red);
-}
-
-.o-background--pale-green {
-  background: var(--color-pale-green);
+.o-background--blue {
+  background: var(--color-blue);
 }
 
 .o-background--light-blue {
   background: var(--color-light-blue);
 }
 
-.o-background--yellow {
-  background: var(--color-yellow);
-}
-
-.o-background--white {
-  background: var(--color-white);
+.o-background--light-red {
+  background: var(--color-light-red);
 }
 
 .o-width-height--10 {
   width: 10px;
   height: 10px;
-}
-
-.o-width-height--12 {
-  width: 12px;
-  height: 12px;
 }
 
 .o-width-height--14 {
@@ -456,10 +476,6 @@ ol, ul {
   height: 10px;
 }
 
-.o-height--12 {
-  height: 12px;
-}
-
 .o-height--14 {
   height: 14px;
 }
@@ -490,10 +506,6 @@ ol, ul {
 
 .o-width--10 {
   width: 10px;
-}
-
-.o-width--12 {
-  width: 12px;
 }
 
 .o-width--14 {
@@ -907,6 +919,37 @@ select {
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+p {
+  display: block;
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
 }
 
 /* ========================================================================================= */

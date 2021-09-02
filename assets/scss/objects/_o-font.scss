@@ -46,7 +46,11 @@
         font-size: 0.875rem;
         line-height: 1.125rem;
 
-    } 
+    }  @else if $level == xxs {
+        font-size: 0.75rem;
+        line-height: 0.875rem;
+
+   } 
     
     //FONT WEIGHT
     @if $font-weight == light {
@@ -183,6 +187,20 @@
     &-xs--bold{
         @extend .o-font-primary-body;
         @include font-weight-size(xs,bold);
+    }
+
+     /* LEVEL EXTRA EXTRA SMALL */   
+     &-xxs--light{
+        @extend .o-font-primary-body;
+        @include font-weight-size(xxs,light);
+    }
+    &-xxs--medium{
+        @extend .o-font-primary-body;
+        @include font-weight-size(xxs,medium);
+    }
+    &-xxs--bold{
+        @extend .o-font-primary-body;
+        @include font-weight-size(xxs,bold);
     }
 
 }

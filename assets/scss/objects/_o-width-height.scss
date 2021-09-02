@@ -1,5 +1,6 @@
 @each $nameSize, $size in $sizes{
-    .o-width--#{$nameSize}{
+    .o-width-height--#{$nameSize}{
         width: $size;
+        height: $size;
     }
 }

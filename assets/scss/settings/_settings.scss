@@ -1,18 +1,42 @@
 @import url($url-font-primary);
 
+/*
+IMPORTANT!
+There should always be a color that is called primary and disabled
+SEE OBJECTS/O-DIVIDER
+*/
+
+//DEFINE ARRAY WITH COLORS
+$colors: (
+    "ocean": #75DDDD, 
+    "steel-ocean": #508891, 
+    "primary": #172A3A, 
+    "secondary": #09BC8A, 
+    "white": #ffffff, 
+    "dark": #0E1923, 
+    "disabled": #AEB6C3, 
+    "blue": #0067FA, 
+    "light-blue": #A1E7FC, 
+    "light-red": #F56476, 
+);
+
+$sizes: (
+    "10": 10px, 
+    "14": 14px, 
+    "16": 16px, 
+    "18": 18px, 
+    "20": 20px, 
+    "22": 22px, 
+    "24": 24px, 
+    "26": 26px, 
+);
+
 :root {
-    //COLORS
-    --color-primary: #12171E;
-    --color-steel-blue: #536075;
-    --color-secondary: #F6F9FC;
-    --color-rust:#FF7646;
-    --color-disabled:#AEB6C3;
-    --color-white: #FFFFFF;
-    --color-pale-green:#62FF7D;
-    --color-red:#F84545;
-    --color-light-blue:#A1E7FC;
-    --color-yellow:#FFD460;
+    @each $nameColor, $color in $colors{
+        --color-#{$nameColor}:#{$color};
+    }
 }
+
 // FONTS
 // This part change in function the url import
 $font-primary: 'Raleway', sans-serif;
