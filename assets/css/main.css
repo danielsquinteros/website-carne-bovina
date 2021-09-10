@@ -8,13 +8,13 @@ There should always be a color that is called primary and disabled
 SEE OBJECTS/O-DIVIDER
 */
 :root {
-  --color-ocean:#75DDDD;
-  --color-steel-ocean:#508891;
   --color-primary:#172A3A;
   --color-secondary:#09BC8A;
+  --color-disabled:#AEB6C3;
+  --color-ocean:#75DDDD;
+  --color-steel-ocean:#508891;
   --color-white:#ffffff;
   --color-dark:#0E1923;
-  --color-disabled:#AEB6C3;
   --color-blue:#0067FA;
   --color-light-blue:#A1E7FC;
   --color-light-red:#F56476;
@@ -92,18 +92,14 @@ ol, ul {
   margin: 0 auto;
 }
 
+.base-font-primary, .o-font-primary-title-l1--light, .o-font-primary-title-l1--medium, .o-font-primary-title-l1--bold, .o-font-primary-title-l2--light, .o-font-primary-title-l2--medium, .o-font-primary-title-l2--bold, .o-font-primary-title-l3--light, .o-font-primary-title-l3--medium, .o-font-primary-title-l3--bold, .o-font-primary-title-l4--light, .o-font-primary-title-l4--medium, .o-font-primary-title-l4--bold, .o-font-primary-body-m--light, .o-font-primary-body-m--medium, .o-font-primary-body-m--bold, .o-font-primary-body-s--light, .o-font-primary-body-s--medium, .o-font-primary-body-s--bold, .o-font-primary-body-xs--light, .o-font-primary-body-xs--medium, .o-font-primary-body-xs--bold, .o-font-primary-body-xss--light, .o-font-primary-body-xss--medium, .o-font-primary-body-xss--bold {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+}
+
 /* ========================================================================================= */
 /* TITLES */
 /* ========================================================================================= */
-.o-font-primary-title, .o-font-primary-title-l1--light, .o-font-primary-title-l1--medium, .o-font-primary-title-l1--bold, .o-font-primary-title-l2--light, .o-font-primary-title-l2--medium, .o-font-primary-title-l2--bold, .o-font-primary-title-l3--light, .o-font-primary-title-l3--medium, .o-font-primary-title-l3--bold, .o-font-primary-title-l4--light, .o-font-primary-title-l4--medium, .o-font-primary-title-l4--bold {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  /* LEVEL 1 */
-  /* LEVEL 2 */
-  /* LEVEL 3 */
-  /* LEVEL 4 */
-}
-
 .o-font-primary-title-l1--light {
   font-size: 3.75rem;
   line-height: 4.75rem;
@@ -245,29 +241,16 @@ ol, ul {
 /* ========================================================================================= */
 /* BODYS */
 /* ========================================================================================= */
-.o-font-primary-body, .o-font-primary-body-m--light, .o-font-primary-body-m--medium, .o-font-primary-body-m--medium--link, .o-font-primary-body-m--bold, .o-font-primary-body-s--light, .o-font-primary-body-s--medium, .o-font-primary-body-s--bold, .o-font-primary-body-xs--light, .o-font-primary-body-xs--medium, .o-font-primary-body-xs--bold, .o-font-primary-body-xxs--light, .o-font-primary-body-xxs--medium, .o-font-primary-body-xxs--bold {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  /* LEVEL MEDIUM */
-  /* LEVEL SMALL */
-  /* LEVEL EXTRA SMALL */
-  /* LEVEL EXTRA EXTRA SMALL */
-}
-
 .o-font-primary-body-m--light {
   font-size: 1.125rem;
   line-height: 1.4375rem;
   font-weight: 300;
 }
 
-.o-font-primary-body-m--medium, .o-font-primary-body-m--medium--link {
+.o-font-primary-body-m--medium {
   font-size: 1.125rem;
   line-height: 1.4375rem;
   font-weight: 500;
-}
-
-.o-font-primary-body-m--medium--link {
-  text-decoration: underline;
 }
 
 .o-font-primary-body-m--bold {
@@ -312,19 +295,19 @@ ol, ul {
   font-weight: bold;
 }
 
-.o-font-primary-body-xxs--light {
+.o-font-primary-body-xss--light {
   font-size: 0.75rem;
   line-height: 0.875rem;
   font-weight: 300;
 }
 
-.o-font-primary-body-xxs--medium {
+.o-font-primary-body-xss--medium {
   font-size: 0.75rem;
   line-height: 0.875rem;
   font-weight: 500;
 }
 
-.o-font-primary-body-xxs--bold {
+.o-font-primary-body-xss--bold {
   font-size: 0.75rem;
   line-height: 0.875rem;
   font-weight: bold;
@@ -333,14 +316,6 @@ ol, ul {
 /* ========================================================================================= */
 /* END BODYS */
 /* ========================================================================================= */
-.o-color--ocean {
-  color: var(--color-ocean);
-}
-
-.o-color--steel-ocean {
-  color: var(--color-steel-ocean);
-}
-
 .o-color--primary {
   color: var(--color-primary);
 }
@@ -349,16 +324,24 @@ ol, ul {
   color: var(--color-secondary);
 }
 
+.o-color--disabled {
+  color: var(--color-disabled);
+}
+
+.o-color--ocean {
+  color: var(--color-ocean);
+}
+
+.o-color--steel-ocean {
+  color: var(--color-steel-ocean);
+}
+
 .o-color--white {
   color: var(--color-white);
 }
 
 .o-color--dark {
   color: var(--color-dark);
-}
-
-.o-color--disabled {
-  color: var(--color-disabled);
 }
 
 .o-color--blue {
@@ -392,14 +375,6 @@ ol, ul {
   border: 0.7px solid var(--color-primary);
 }
 
-.o-background--ocean {
-  background: var(--color-ocean);
-}
-
-.o-background--steel-ocean {
-  background: var(--color-steel-ocean);
-}
-
 .o-background--primary {
   background: var(--color-primary);
 }
@@ -408,16 +383,24 @@ ol, ul {
   background: var(--color-secondary);
 }
 
+.o-background--disabled {
+  background: var(--color-disabled);
+}
+
+.o-background--ocean {
+  background: var(--color-ocean);
+}
+
+.o-background--steel-ocean {
+  background: var(--color-steel-ocean);
+}
+
 .o-background--white {
   background: var(--color-white);
 }
 
 .o-background--dark {
   background: var(--color-dark);
-}
-
-.o-background--disabled {
-  background: var(--color-disabled);
 }
 
 .o-background--blue {
