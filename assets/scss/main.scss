@@ -46,15 +46,22 @@
 /* ========================================================================================= */
 /* OBJECTS */
 /* ========================================================================================= */
-@import './objects/o-container';
-@import './objects/o-font';
-@import './objects/o-color';
-@import './objects/o-divider';
+
 @import './objects/o-background';
-@import './objects/o-width-height';
+@import './objects/o-border-radius';
+@import './objects/o-color';
+@import './objects/o-container';
+@import './objects/o-divider';
+@import './objects/o-font';
 @import './objects/o-height';
-@import './objects/o-width';
+@import './objects/o-opacity';
+@import './objects/o-padding';
 @import './objects/o-text-align';
+@import './objects/o-text-decoration';
+@import './objects/o-visibility';
+@import './objects/o-width-height';
+@import './objects/o-width';
+
 /* ============================================================ */
 /* END OBJECTS */
 /* ========================================================================================= */
