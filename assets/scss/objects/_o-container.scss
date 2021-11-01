@@ -3,4 +3,12 @@
     max-width: 1600px;
     display: block;
     margin: 0 auto;
+    @include sm(){
+        width: 95%;
+    }
+
+    &--strong{
+        margin-top: 20px;
+        width: 94%;
+    }
 }

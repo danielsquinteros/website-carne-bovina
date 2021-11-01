@@ -1,36 +1,7 @@
-@mixin select-size-color($size, $color){
-    @if $size == strong and $color == primary{
-        border: 1px solid var(--color-primary);
-    }
-    @if $size == light and $color == disabled{
-        border: 0.7px solid var(--color-disabled);
-    }
-    @if $size == light and $color == primary{
-        border: 0.7px solid var(--color-primary);
+@each $nameDivider, $heightDivider in $dividers{
+    .o-divider--#{$nameDivider}{
+        height: $heightDivider;
+        width: 100%;
     }
 }
 
-
-.o-divider{
-    width: 100%;
-    margin-top: 45px;
-    margin-bottom: 45px;
-    &-strong{
-        &--primary{
-            @extend .o-divider;
-            margin-top: 0px;
-            @include select-size-color(strong,primary);
-        }
-    }
-    &-light{
-        &--disabled{
-            @extend .o-divider;
-            @include select-size-color(light,disabled);
-        }
-        &--primary{
-            @extend .o-divider;
-            @include select-size-color(light,primary);
-        }
-    }
-  
-}

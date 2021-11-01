@@ -1,0 +1,5 @@
+@each $nameSize, $size in $sizes{
+    .o-border-radius--#{$nameSize}{
+        border-radius: $size;
+    }
+}
