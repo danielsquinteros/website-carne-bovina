@@ -4,21 +4,217 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nombre de Página web</title>
-    <link rel="stylesheet" rel="preload" href="./assets/css/main.css.map">
-    <meta name="description" content="Descripción de la página web">
-    <meta name="keywords" content="Palabras claves">
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <title>BilavPlus - Centro Médico Dental</title>
+    <meta name="description" content="BilavPlus - Centro Médico Dental - Nos preocupamos por ti">
+    <meta name="keywords" content="Dentista Puerto Montt">
+    <link rel="shortcut icon" href="./assets/images/logo_bilavplus.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" rel="preload" href="./assets/css/main.css">
 </head>
 <body>
-    <header>
-
+    <header class="c-header" id="header">
+        <div class="c-header__contact o-background--grey-light">
+            <div class="c-header__wrapper-contact o-container">
+                <p class="c-header__phone text--medium--small o-text-decoration">
+                    <img src="./assets/images/icons/phone_black.svg" class="o-width--22" alt="Icono celular">
+                    <a class="c-header__link-phone o-color--blue-dark" href="tel:+56966182335"> 
+                        +569 6618 2335
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="c-header_nav">
+            <div class="c-header__wrapper-nav o-container">
+                <a href="/index.html">
+                    <img  class="c-header__logo" src="/assets/images/logo_bilavplus_grande.png" alt="Logo BilavPlus">
+                </a>
+                <nav class="c-header__nav">
+                    <ul class="c-header__ul">
+                        <li class="c-header__li">
+                            <a href="#google-maps" class="c-header__a o-color--blue-dark text--large--medium">
+                            Ubicación
+                            </a>
+                        </li>
+                        <li class="c-header__li">
+                            <a href="#footer" class="c-header__a o-color--blue-dark text--large--medium">
+                            Contacto
+                            </a>
+                        </li>
+                        <li class="c-header__li--bg">
+                            <a href="#request-hour" class="c-header__btn-bg o-color--white text--large--medium o-background--blue-dark">
+                            Reservar
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
     <main>
+        <div class="c-title">
+            <div class="c-title__container o-container">
+                <h2 class="text--h2--bold o-color--blue-dark">Nos preocupamos por ti</h2>
+                <h1 class="text--normal--medium o-color--grey">Centro Médico Dental Puerto Montt - Dentista Puerto Montt</h1>
+            </div>
+        </div>
+        <div class="c-image-form" id="request-hour">
+            <div class="c-image-form__container o-container">
+                <div class="c-image-form__wrapper-image">
+                    <img class="c-image-form__image" src="./assets/images/dentist-and-paciente-vertical.jpeg" alt="Paciente con la boca abierta en una silla dental siendo atendido por una dentista">
+                </div>
+                <div class="c-image-form__wrapper-form">
+                    <h4 class="c-image-form__title o-color--blue-dark text--h3--medium">Solicitar hora</h4>
+                    <form action="./pages/success.html" name="contact" method="POST" data-netlify="true" class="c-forms__wrapper-forms">
+                        <div class="form-floating mb-3">
+                            <input type="name" name="name" class="form-control" id="input-name" placeholder="Felipe Casanova">
+                            <label for="input-name" class="o-color--black">Nombre completo</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" name="email" class="form-control" id="input-email" placeholder="felipe@gmail.com">
+                            <label for="input-email" class="o-color--black">Email</label>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">+56</span>
+                            <div class="form-floating">
+                                <input type="phone" name="phone" class="form-control" id="input-phone" placeholder="56912345678">
+                                <label for="input-phone" class="o-color--black">Número celular</label>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" name="specialty" id="selectSpecialty">
+                                <option selected>Especialidad</option>
+                                <option value="Odontología">Odontología</option>
+                                <option value="Medicina general">Medicina general</option>
+                                <option value="Nutrición">Nutrición</option>
+                                <option value="Fonoaudiología">Fonoaudiología</option>
+                            </select>
+                            <label for="selectSpecialty"  class="o-color--black">Seleccionar</label>
+                        </div>
+                        <div class="c-image-form__checks" id="forms-checks">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" name="evaluacion_dental" type="checkbox" value="true" id="checkEvaluacionDental">
+                                <label class="form-check-label" for="checkEvaluacionDental">
+                                    Evaluación dental
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input"  name="limpieza_dental" type="checkbox" value="true" id="checkLimpiezaDental">
+                                <label class="form-check-label" for="checkLimpiezaDental">
+                                  Limpieza dental
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input"  name="exodoncia" type="checkbox" value="true" id="checkExodoncia">
+                                <label class="form-check-label" for="checkExodoncia">
+                                  Exodoncia
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input"  name="sellantes" type="checkbox" value="true" id="checkSellantes">
+                                <label class="form-check-label" for="checkSellantes">
+                                  Sellantes
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input"  name="fluor" type="checkbox" value="true" id="checkFluor">
+                                <label class="form-check-label" for="checkFluor">
+                                  Fluor
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input"  name="tapaduras" type="checkbox" value="true" id="checkTapaduras">
+                                <label class="form-check-label" for="checkTapaduras">
+                                  Tapaduras
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input"  name="otro" type="checkbox" value="true" id="checkOtro">
+                                <label class="form-check-label" for="checkOtro">
+                                  Otro
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" name="tentative_schedule" id="selectTentativeSchedule">
+                                <option selected>Horario tentativo</option>
+                                <option value="09:00 - 11:00">09:00 hrs - 11:00 hrs</option>
+                                <option value="11:00 - 13:30">11:00 hrs - 13:30 hrs</option>
+                                <option value="14:00 - 16:30">14:30 hrs - 16:30 hrs</option>
+                            </select>
+                            <label for="selectTentativeSchedule"  class="o-color--black">Seleccionar</label>
+                        </div>
+                        <div class="d-grid gap-2 col-12 mx-auto mt-3">
+                            <button disabled class="btn btn-lg c-image-form__button" id="button-send" type="submit">Enviar</button>
+                        </div>
+                        <p class="c-image-form__notes text--small--light">
+                            Nos contactaremos contigo a la brevedad vía WhatsApp para ofrecerte horas acordes a tu disponibilidad
+                        </p>
+                    </form>
+                </div>
+            </div>
 
+        </div>
+        <iframe id="google-maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11967.12311888239!2d-72.9157826!3d-41.4222772!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96183ab4c30a93e7%3A0x49146a99336cc354!2sOng%20Bilav!5e0!3m2!1sen!2scl!4v1683134044471!5m2!1sen!2scl" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </main>
-    <footer>
-
+    <footer class="c-footer o-background--blue-dark">
+        <div class="c-footer__container o-container">
+            <div class="c-footer__reservation">
+                <h4 class="text--h3--bold o-color--white">Consulta por nuestra <br> disponibilidad de horas </h4>
+                <a href="#request-hour" class="c-footer__link-reservation text--large--bold o-color--white">
+                    Reservar
+                </a>
+            </div>
+            <div class="c-footer__divider o-divider--10 o-background--white"></div>
+            <div class="c-footer__grid-nav">
+                <div class="c-footer__nav-logo">
+                    <a href="#header">
+                        <img class="o-width--50" src="./assets/images/logo_negative.svg" alt="Logo BilavPlus en negativo" />
+                    </a>
+                </div>
+                <div class="c-footer__nav-contact">
+                    <h4 class="text--large--bold o-color--white">Contacto</h4>
+                    <p class="c-footer__link text--normal--medium">
+                        <img class="c-footer__link-icon" class="o-width--24" src="./assets/images/icons/ubication.svg"  alt="Icono ubicación"/>
+                        <a href="https://goo.gl/maps/bex8Hsy4U7VB5wmm7" target="_blank" class="c-footer__a o-text-decoration o-color--white">
+                            Parcela 154, KM 8, Sector La Vara
+                        </a>
+                    </p>
+                    <p class="c-footer__link text--normal--medium">
+                        <img class="c-footer__link-icon" class="o-width--24" src="./assets/images/icons/phone_white.svg"  alt="Icono celular"/>
+                        <a href="tel:+56966182335" class="c-footer__a o-text-decoration o-color--white">
+                            +569 6618 2335
+                        </a>
+                    </p>
+                    <p class="c-footer__link text--normal--medium">
+                        <img class="c-footer__link-icon" class="o-width--24" src="./assets/images/icons/mail.svg" alt="Icono correo"/>
+                        <a href="mailto:bilavplus@gmail.com" class="c-footer__a o-text-decoration o-color--white">
+                            bilavplus@gmail.com
+                        </a>
+                    </p>
+                    <p class="c-footer__link text--normal--medium  o-color--white">
+                        <img class="c-footer__link-icon" class="o-width--24" src="./assets/images/icons/time.svg"  alt="Icono reloj" />
+                        Lunes a Viernes: 09:00 a 16:30 hrs.
+                    </p>
+                </div>
+                <div class="c-footer__nav-social" id="footer">
+                    <h4 class="text--large--bold o-color--white">Redes sociales</h4>
+                    <div class="c-footer__wrapper-social">
+                        <a href="https://www.facebook.com/Bilavpluspm" target="_blank">
+                            <img src="./assets/images/icons/facebook.svg"  class="o--width--12" alt="Icono Facebook" />
+                        </a>
+                        <a href="https://www.instagram.com/bilavpluspm/" target="_blank">
+                            <img src="./assets/images/icons/instagram.svg"  class="o-width--22" alt="Icono Instagram" />
+                        </a>
+                        <a href="https://www.linkedin.com/company/74820670" target="_blank">
+                            <img src="./assets/images/icons/linkedin.svg"  class="o-width--18" alt="Icono Linkedin" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="./assets/js/validation-contact.js"></script>
 </body>
 </html>

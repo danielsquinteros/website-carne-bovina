@@ -1,0 +1,13 @@
+.c-title{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include sm(){
+            width: 90%;
+            align-items: flex-start;
+        }
+    }
+}

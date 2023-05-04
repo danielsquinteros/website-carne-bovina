@@ -8,17 +8,17 @@ SEE OBJECTS/O-DIVIDER
 
 //DEFINE ARRAY WITH COLORS
 $colors: (
-    "primary": #172A3A, 
-    "secondary": #09BC8A, 
-    "disabled": #AEB6C3, 
-    "ocean": #75DDDD, 
-    "steel-ocean": #508891, 
+    "aliceblue": #E8F4FF, 
+    "primary": #3B5C7B, 
+    "aqua-marine-light": #E3FFF6, 
+    "secondary": #FE8749, 
+    "grey-light": #F1F3F5, 
+    "grey": #858E96, 
     "white": #ffffff, 
-    "dark": #0E1923, 
-    "blue": #0067FA, 
-    "light-blue": #A1E7FC, 
-    "light-red": #F56476, 
-    );
+    "blue-dark": #1C2D3D, 
+    "success": #38C976, 
+    "error": #DC3545, 
+);
 
 :root {
     @each $nameColor, $color in $colors{
@@ -67,96 +67,74 @@ $dividers: (
     "20": 2px,
 );
 
-
 // FONTS
 // This part change in function the url import in GENERIC it is implemented
-$font-primary: 'Raleway', sans-serif;
+$font-primary: 'Manrope', sans-serif;
+
 //FONT-WEIGHT for used in the web project
 
-$font-primary-title-levels: (
-    "l1": 1,
-    "l2": 2,
-    "l3": 3,
-    "l4": 4,
+$font-sizes: (
+    "label": label,
+    "small": small,
+    "normal": normal,
+    "large": large,
+    "h1": h1,
+    "h2": h2,
+    "h3": h3,
+    "h4": h4,
 );
 
-$font-primary-body-levels: (
-    "m": m,
-    "s": s,
-    "xs": xs,
-    "xss": xxs,
-);
-
-$font-primary-weights: (
+$font-weights: (
     "light": 300,
     "medium": 500,
-    "bold": bold,
+    "bold": 700,
 );
 
-@mixin font-size($level){
-    //FONTS SIZES TITLE
-
-    //LEVEL 1 = 60px
-    @if $level == 1 {
-        font-size: 3.75rem;
-        line-height: 4.75rem;
+@mixin font-size($size){    
+    // H1 - 42px, 57.4px
+    @if $size == h1 {
+        font-size: 2.625rem;
+        line-height: 3.5875rem;
     }
-
-    //LEVEL 2 = 48px
-    @else if $level == 2 {
-        font-size: 3rem;
-        line-height: 3.5625rem;
-        //LEVEL 2 SM= 34px
-        @include sm(){
-            font-size: 2.125rem;
-            line-height: 2.625rem;
-        }
-    } 
-
-    //LEVEL 3 = 32px
-    @else if $level == 3 {
+    
+    // H2 - 32px, 43.7px
+    @else if $size == h2 {
         font-size: 2rem;
-        line-height: 2.375rem;
-    } 
-
-    //LEVEL 4 = 22px
-    @else if $level == 4 {
-        font-size: 1.375rem;
-        line-height: 1.75rem;
-        //LEVEL 4 XL= 18px
-        @include xl(){
-            font-size: 1.125rem;
-            line-height: 1.4375rem;
-        }
-        //LEVEL 4 MD= 16px
-        @include md(){
-            font-size: 1rem;
-            line-height: 1.2375rem;
-        }
-    }
-    //FONTS SIZES BODY
-    //LEVEL M = 18px
-    @else if $level == m {
-        font-size: 1.125rem;
-        line-height: 1.4375rem;
-    } 
-
-    //LEVEL S = 16px
-    @else if $level == s {
-        font-size: 1rem;
-        line-height: 1.25rem;
-    } 
-
-    //LEVEL XS = 14px
-    @else if $level == xs {
-        font-size: 0.875rem;
-        line-height: 1.125rem;
-    } 
-
-    //LEVEL XSS = 12px 
-    @else if $level == xxs {
-        font-size: 0.75rem;
-        line-height: 0.875rem;
+        line-height: 2.7313rem;
     } 
     
+    // H3 - 24px, 32.8px
+    @else if $size == h3 {
+        font-size: 1.5rem ;
+        line-height: 2.05rem;
+    } 
+    
+    // H4 - 20px, 27.3px
+    @else if $size == h4 {
+        font-size: 1.25rem;
+        line-height: 1.7063rem;
+    }
+    
+    @else if $size == large {
+        font-size: 1.125rem;
+        line-height: 1.5375rem;
+    } 
+
+    // normal = 16px, 21.9px
+    @else if $size == normal {
+        font-size: 1rem;
+        line-height: 1.3687rem;
+    } 
+
+    // small = 14px, 19.1px
+    @else if $size == small {
+        font-size: 0.875rem;
+        line-height: 1.1938rem;
+    } 
+
+    // label = 12px, 16.4px
+    @else if $size == label {
+        font-size: 0.75rem;
+        line-height: 1.025rem;
+    } 
 }
