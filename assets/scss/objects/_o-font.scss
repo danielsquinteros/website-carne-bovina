@@ -1,20 +1,62 @@
-@each $font-size in $font-sizes{
-    $nameSize: nth($font-size, 1);
-    $valueSize: nth($font-size, 2);
-    .text-{
-        &-#{$nameSize}{
-            @each $font-weight in $font-weights{
-                $nameWeight: nth($font-weight, 1);
-                $valeWeight: nth($font-weight, 2);
+.base-font-primary {
+    font-family: $font-primary;
+    // letter-spacing: -0.01em;
+    font-style: normal;
+}
+
+/* ========================================================================================= */
+/* TITLES */
+/* ========================================================================================= */
+
+@each $font-primary-title-level in $font-primary-title-levels{
+    $nameLevel: nth($font-primary-title-level, 1);
+    $valueLevel: nth($font-primary-title-level, 2);
+    .o-font-primary-title{
+        &-#{$nameLevel}{
+            @each $font-primary-weight in $font-primary-weights{
+                $nameWeight: nth($font-primary-weight, 1);
+                $valeWeight: nth($font-primary-weight, 2);
                 &--#{$nameWeight}{
-                    @include font-size($valueSize);
+                    @extend .base-font-primary; 
+                    @include font-size($valueLevel);
                     font-weight: #{$valeWeight}
                 }
-            }     
+            }
+                
         }
     }
 }
 
-.o-type-font-primary{
-    font-family: $font-primary;
+/* ========================================================================================= */
+/* END TITLES */
+/* ========================================================================================= */
+
+/* ========================================================================================= */
+/* BODYS */
+/* ========================================================================================= */
+
+
+@each $font-primary-title-level in $font-primary-body-levels{
+    $nameLevel: nth($font-primary-title-level, 1);
+    $valueLevel: nth($font-primary-title-level, 2);
+    .o-font-primary-body{
+        &-#{$nameLevel}{
+            @each $font-primary-weight in $font-primary-weights{
+                $nameWeight: nth($font-primary-weight, 1);
+                $valeWeight: nth($font-primary-weight, 2);
+                &--#{$nameWeight}{
+                    @extend .base-font-primary; 
+                    @include font-size($valueLevel);
+                    font-weight: #{$valeWeight}
+                }
+            }
+                
+        }
+    }
 }
+
+
+/* ========================================================================================= */
+/* END BODYS */
+/* ========================================================================================= */
+

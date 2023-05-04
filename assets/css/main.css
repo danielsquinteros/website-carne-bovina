@@ -1,23 +1,23 @@
 /* ========================================================================================= */
 /* SETTINGS */
 /* ========================================================================================= */
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap");
 /*
 IMPORTANT!
 There should always be a color that is called primary and disabled
 SEE OBJECTS/O-DIVIDER
 */
 :root {
-  --color-aliceblue:#E8F4FF;
-  --color-primary:#3B5C7B;
-  --color-aqua-marine-light:#E3FFF6;
-  --color-secondary:#FE8749;
-  --color-grey-light:#F1F3F5;
-  --color-grey:#858E96;
+  --color-primary:#172A3A;
+  --color-secondary:#09BC8A;
+  --color-disabled:#AEB6C3;
+  --color-ocean:#75DDDD;
+  --color-steel-ocean:#508891;
   --color-white:#ffffff;
-  --color-blue-dark:#1C2D3D;
-  --color-success:#38C976;
-  --color-error:#DC3545;
+  --color-dark:#0E1923;
+  --color-blue:#0067FA;
+  --color-light-blue:#A1E7FC;
+  --color-light-red:#F56476;
 }
 
 /* ========================================================================================= */
@@ -45,11 +45,12 @@ SEE OBJECTS/O-DIVIDER
 /* GENERIC */
 /* ========================================================================================= */
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html, body {
-  font-family: "Manrope", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-size: 16px;
   margin: 0;
@@ -69,9 +70,6 @@ h1, h2, h3, h4, p {
 }
 
 ol, ul {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-left: 0px;
   list-style: none;
 }
 
@@ -87,44 +85,44 @@ ol, ul {
 /* ========================================================================================= */
 /* OBJECTS */
 /* ========================================================================================= */
-.o-background--aliceblue {
-  background: var(--color-aliceblue);
-}
-
 .o-background--primary {
   background: var(--color-primary);
-}
-
-.o-background--aqua-marine-light {
-  background: var(--color-aqua-marine-light);
 }
 
 .o-background--secondary {
   background: var(--color-secondary);
 }
 
-.o-background--grey-light {
-  background: var(--color-grey-light);
+.o-background--disabled {
+  background: var(--color-disabled);
 }
 
-.o-background--grey {
-  background: var(--color-grey);
+.o-background--ocean {
+  background: var(--color-ocean);
+}
+
+.o-background--steel-ocean {
+  background: var(--color-steel-ocean);
 }
 
 .o-background--white {
   background: var(--color-white);
 }
 
-.o-background--blue-dark {
-  background: var(--color-blue-dark);
+.o-background--dark {
+  background: var(--color-dark);
 }
 
-.o-background--success {
-  background: var(--color-success);
+.o-background--blue {
+  background: var(--color-blue);
 }
 
-.o-background--error {
-  background: var(--color-error);
+.o-background--light-blue {
+  background: var(--color-light-blue);
+}
+
+.o-background--light-red {
+  background: var(--color-light-red);
 }
 
 .o-border-radius--6 {
@@ -199,44 +197,44 @@ ol, ul {
   border-radius: 70px;
 }
 
-.o-color--aliceblue {
-  color: var(--color-aliceblue);
-}
-
 .o-color--primary {
   color: var(--color-primary);
-}
-
-.o-color--aqua-marine-light {
-  color: var(--color-aqua-marine-light);
 }
 
 .o-color--secondary {
   color: var(--color-secondary);
 }
 
-.o-color--grey-light {
-  color: var(--color-grey-light);
+.o-color--disabled {
+  color: var(--color-disabled);
 }
 
-.o-color--grey {
-  color: var(--color-grey);
+.o-color--ocean {
+  color: var(--color-ocean);
+}
+
+.o-color--steel-ocean {
+  color: var(--color-steel-ocean);
 }
 
 .o-color--white {
   color: var(--color-white);
 }
 
-.o-color--blue-dark {
-  color: var(--color-blue-dark);
+.o-color--dark {
+  color: var(--color-dark);
 }
 
-.o-color--success {
-  color: var(--color-success);
+.o-color--blue {
+  color: var(--color-blue);
 }
 
-.o-color--error {
-  color: var(--color-error);
+.o-color--light-blue {
+  color: var(--color-light-blue);
+}
+
+.o-color--light-red {
+  color: var(--color-light-red);
 }
 
 .o-container {
@@ -245,11 +243,13 @@ ol, ul {
   display: block;
   margin: 0 auto;
 }
+
 @media (max-width: 576px) {
   .o-container {
     width: 95%;
   }
 }
+
 .o-container--strong {
   margin-top: 20px;
   width: 94%;
@@ -275,138 +275,230 @@ ol, ul {
   width: 100%;
 }
 
-.text--label--light {
-  font-size: 0.75rem;
-  line-height: 1.025rem;
-  font-weight: 300;
-}
-.text--label--medium {
-  font-size: 0.75rem;
-  line-height: 1.025rem;
-  font-weight: 500;
-}
-.text--label--bold {
-  font-size: 0.75rem;
-  line-height: 1.025rem;
-  font-weight: 700;
+.base-font-primary, .o-font-primary-title-l1--light, .o-font-primary-title-l1--medium, .o-font-primary-title-l1--bold, .o-font-primary-title-l2--light, .o-font-primary-title-l2--medium, .o-font-primary-title-l2--bold, .o-font-primary-title-l3--light, .o-font-primary-title-l3--medium, .o-font-primary-title-l3--bold, .o-font-primary-title-l4--light, .o-font-primary-title-l4--medium, .o-font-primary-title-l4--bold, .o-font-primary-body-m--light, .o-font-primary-body-m--medium, .o-font-primary-body-m--bold, .o-font-primary-body-s--light, .o-font-primary-body-s--medium, .o-font-primary-body-s--bold, .o-font-primary-body-xs--light, .o-font-primary-body-xs--medium, .o-font-primary-body-xs--bold, .o-font-primary-body-xss--light, .o-font-primary-body-xss--medium, .o-font-primary-body-xss--bold {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
 }
 
-.text--small--light {
-  font-size: 0.875rem;
-  line-height: 1.1938rem;
+/* ========================================================================================= */
+/* TITLES */
+/* ========================================================================================= */
+.o-font-primary-title-l1--light {
+  font-size: 3.75rem;
+  line-height: 4.75rem;
   font-weight: 300;
 }
-.text--small--medium {
-  font-size: 0.875rem;
-  line-height: 1.1938rem;
+
+.o-font-primary-title-l1--medium {
+  font-size: 3.75rem;
+  line-height: 4.75rem;
   font-weight: 500;
 }
-.text--small--bold {
-  font-size: 0.875rem;
-  line-height: 1.1938rem;
-  font-weight: 700;
+
+.o-font-primary-title-l1--bold {
+  font-size: 3.75rem;
+  line-height: 4.75rem;
+  font-weight: bold;
 }
 
-.text--normal--light {
-  font-size: 1rem;
-  line-height: 1.3687rem;
+.o-font-primary-title-l2--light {
+  font-size: 3rem;
+  line-height: 3.5625rem;
   font-weight: 300;
 }
-.text--normal--medium {
-  font-size: 1rem;
-  line-height: 1.3687rem;
-  font-weight: 500;
-}
-.text--normal--bold {
-  font-size: 1rem;
-  line-height: 1.3687rem;
-  font-weight: 700;
+
+@media (max-width: 576px) {
+  .o-font-primary-title-l2--light {
+    font-size: 2.125rem;
+    line-height: 2.625rem;
+  }
 }
 
-.text--large--light {
-  font-size: 1.125rem;
-  line-height: 1.5375rem;
-  font-weight: 300;
-}
-.text--large--medium {
-  font-size: 1.125rem;
-  line-height: 1.5375rem;
+.o-font-primary-title-l2--medium {
+  font-size: 3rem;
+  line-height: 3.5625rem;
   font-weight: 500;
 }
-.text--large--bold {
-  font-size: 1.125rem;
-  line-height: 1.5375rem;
-  font-weight: 700;
+
+@media (max-width: 576px) {
+  .o-font-primary-title-l2--medium {
+    font-size: 2.125rem;
+    line-height: 2.625rem;
+  }
 }
 
-.text--h1--light {
-  font-size: 2.625rem;
-  line-height: 3.5875rem;
-  font-weight: 300;
-}
-.text--h1--medium {
-  font-size: 2.625rem;
-  line-height: 3.5875rem;
-  font-weight: 500;
-}
-.text--h1--bold {
-  font-size: 2.625rem;
-  line-height: 3.5875rem;
-  font-weight: 700;
+.o-font-primary-title-l2--bold {
+  font-size: 3rem;
+  line-height: 3.5625rem;
+  font-weight: bold;
 }
 
-.text--h2--light {
+@media (max-width: 576px) {
+  .o-font-primary-title-l2--bold {
+    font-size: 2.125rem;
+    line-height: 2.625rem;
+  }
+}
+
+.o-font-primary-title-l3--light {
   font-size: 2rem;
-  line-height: 2.7313rem;
+  line-height: 2.375rem;
   font-weight: 300;
 }
-.text--h2--medium {
+
+.o-font-primary-title-l3--medium {
   font-size: 2rem;
-  line-height: 2.7313rem;
+  line-height: 2.375rem;
   font-weight: 500;
 }
-.text--h2--bold {
+
+.o-font-primary-title-l3--bold {
   font-size: 2rem;
-  line-height: 2.7313rem;
-  font-weight: 700;
+  line-height: 2.375rem;
+  font-weight: bold;
 }
 
-.text--h3--light {
-  font-size: 1.5rem;
-  line-height: 2.05rem;
+.o-font-primary-title-l4--light {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
   font-weight: 300;
 }
-.text--h3--medium {
-  font-size: 1.5rem;
-  line-height: 2.05rem;
-  font-weight: 500;
-}
-.text--h3--bold {
-  font-size: 1.5rem;
-  line-height: 2.05rem;
-  font-weight: 700;
+
+@media (max-width: 1200px) {
+  .o-font-primary-title-l4--light {
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+  }
 }
 
-.text--h4--light {
-  font-size: 1.25rem;
-  line-height: 1.7063rem;
+@media (max-width: 768px) {
+  .o-font-primary-title-l4--light {
+    font-size: 1rem;
+    line-height: 1.2375rem;
+  }
+}
+
+.o-font-primary-title-l4--medium {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .o-font-primary-title-l4--medium {
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .o-font-primary-title-l4--medium {
+    font-size: 1rem;
+    line-height: 1.2375rem;
+  }
+}
+
+.o-font-primary-title-l4--bold {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+  .o-font-primary-title-l4--bold {
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .o-font-primary-title-l4--bold {
+    font-size: 1rem;
+    line-height: 1.2375rem;
+  }
+}
+
+/* ========================================================================================= */
+/* END TITLES */
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* BODYS */
+/* ========================================================================================= */
+.o-font-primary-body-m--light {
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
   font-weight: 300;
 }
-.text--h4--medium {
-  font-size: 1.25rem;
-  line-height: 1.7063rem;
+
+.o-font-primary-body-m--medium {
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
   font-weight: 500;
 }
-.text--h4--bold {
-  font-size: 1.25rem;
-  line-height: 1.7063rem;
-  font-weight: 700;
+
+.o-font-primary-body-m--bold {
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  font-weight: bold;
 }
 
-.o-type-font-primary {
-  font-family: "Manrope", sans-serif;
+.o-font-primary-body-s--light {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 300;
 }
 
+.o-font-primary-body-s--medium {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.o-font-primary-body-s--bold {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+}
+
+.o-font-primary-body-xs--light {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 300;
+}
+
+.o-font-primary-body-xs--medium {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 500;
+}
+
+.o-font-primary-body-xs--bold {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: bold;
+}
+
+.o-font-primary-body-xss--light {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  font-weight: 300;
+}
+
+.o-font-primary-body-xss--medium {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  font-weight: 500;
+}
+
+.o-font-primary-body-xss--bold {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  font-weight: bold;
+}
+
+/* ========================================================================================= */
+/* END BODYS */
+/* ========================================================================================= */
 .o-height--6 {
   height: 6px;
 }
@@ -590,9 +682,11 @@ ol, ul {
 .o-text-align--start {
   text-align: start;
 }
+
 .o-text-align--center {
   text-align: center;
 }
+
 .o-text-align--end {
   text-align: end;
 }
@@ -604,6 +698,7 @@ ol, ul {
 .o-visibility--hidden {
   visibility: hidden;
 }
+
 .o-visibility--visible {
   visibility: visible;
 }
@@ -776,267 +871,6 @@ ol, ul {
 /* ========================================================================================= */
 /* COMPONENTS */
 /* ========================================================================================= */
-.c-footer {
-  padding-top: 30px;
-  padding-bottom: 80px;
-}
-.c-footer__container {
-  width: 90%;
-}
-.c-footer__reservation {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  text-align: center;
-}
-.c-footer__divider {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.c-footer__grid-nav {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-@media (max-width: 1024px) {
-  .c-footer__grid-nav {
-    gap: 50px;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-  }
-}
-.c-footer__link-reservation {
-  cursor: pointer;
-  margin-top: 20px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: 2px solid white;
-}
-.c-footer__link-reservation:hover {
-  background-color: white;
-  color: var(--color-blue-dark);
-}
-.c-footer__link {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.c-footer__wrapper-social {
-  margin-top: 10px;
-  display: flex;
-  gap: 30px;
-}
-.c-footer__link-icon {
-  margin-right: 10px;
-}
-.c-footer__a:hover {
-  color: var(--color-aqua-marine-light);
-}
-
-.c-header__contact {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.c-header__wrapper-contact {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.c-header__phone {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-.c-header__logo {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 200px;
-  height: auto;
-}
-.c-header__wrapper-nav {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-@media (max-width: 1024px) {
-  .c-header__wrapper-nav {
-    padding-left: 15px;
-    flex-direction: column;
-    align-items: start;
-  }
-}
-@media (max-width: 1024px) {
-  .c-header__nav {
-    margin-top: 30px;
-  }
-}
-.c-header__ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 80px;
-}
-@media (max-width: 1024px) {
-  .c-header__ul {
-    gap: 25px;
-    flex-direction: column;
-    align-items: start;
-  }
-}
-.c-header__a:hover {
-  color: black;
-}
-.c-header__btn-bg {
-  padding: 10px 30px;
-  border-radius: 10px;
-}
-.c-header__btn-bg:hover {
-  background-color: var(--color-secondary);
-  color: white;
-}
-.c-header__link-phone:hover {
-  color: var(--color-primary);
-}
-
-.c-title {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-.c-title__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media (max-width: 576px) {
-  .c-title__container {
-    width: 90%;
-    align-items: flex-start;
-  }
-}
-
-.c-image-form {
-  padding-top: 50px;
-  padding-bottom: 100px;
-}
-.c-image-form__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-@media (max-width: 1024px) {
-  .c-image-form__container {
-    gap: 40px;
-    flex-direction: column-reverse;
-  }
-}
-.c-image-form__wrapper-image {
-  width: 50%;
-  text-align: center;
-}
-@media (max-width: 1024px) {
-  .c-image-form__wrapper-image {
-    width: 100%;
-  }
-}
-.c-image-form__wrapper-form {
-  width: 40%;
-}
-@media (max-width: 1024px) {
-  .c-image-form__wrapper-form {
-    width: 95%;
-  }
-}
-.c-image-form__image {
-  width: 60%;
-  border-radius: 10px;
-}
-@media (max-width: 1024px) {
-  .c-image-form__image {
-    width: 95%;
-  }
-}
-.c-image-form__title {
-  margin-bottom: 25px;
-}
-.c-image-form__checks {
-  display: none;
-}
-.c-image-form__button {
-  background-color: #bcbcbc;
-  padding: 10px 45px;
-  text-align: center;
-  transition: 0.5s;
-  background-size: 200% auto;
-  font-weight: 700;
-  color: white;
-  border-radius: 10px;
-  border: 1px solid #858E96;
-  display: block;
-}
-.c-image-form__button:hover {
-  color: white;
-  background-color: #38C976;
-}
-.c-image-form__notes {
-  padding-top: 10px;
-}
-
-.c-success {
-  background-color: var(--color-grey-light);
-  height: 100vh;
-  width: 100vw;
-}
-.c-success__container {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.c-success__wrapper-message {
-  width: 40%;
-  padding: 40px;
-  border-radius: 20px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-@media (max-width: 1024px) {
-  .c-success__wrapper-message {
-    width: 60%;
-  }
-}
-@media (max-width: 768px) {
-  .c-success__wrapper-message {
-    width: 90%;
-  }
-}
-.c-success__text {
-  margin-bottom: 20px;
-}
-.c-success__icon-check {
-  width: 65px;
-  height: 65px;
-}
-.c-success__button {
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  border-radius: 10px;
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
-}
-.c-success__button:hover {
-  border: 1px solid var(--color-blue-dark);
-  color: var(--color-blue-dark);
-}
-
 /* ========================================================================================= */
 /* END COMPONENTS */
 /* ========================================================================================= */
@@ -1051,8 +885,10 @@ ol, ul {
 * 2. Prevent adjustments of font size after orientation changes in iOS.
 */
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
 /* Sections
@@ -1087,9 +923,13 @@ h1 {
   * 2. Show the overflow in Edge and IE.
   */
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
 }
 
 /**
@@ -1097,8 +937,10 @@ hr {
   * 2. Correct the odd `em` font sizing in all browsers.
   */
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /* Text-level semantics
@@ -1116,9 +958,13 @@ a {
   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
   */
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
 }
 
 /**
@@ -1136,8 +982,10 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /**
@@ -1187,10 +1035,14 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
 }
 
 /**
@@ -1198,7 +1050,8 @@ textarea {
   * 1. Show the overflow in Edge.
   */
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -1207,7 +1060,8 @@ input { /* 1 */
   * 1. Remove the inheritance of text transform in Firefox.
   */
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -1215,9 +1069,9 @@ select { /* 1 */
   * Correct the inability to style clickable types in iOS and Safari.
   */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -1225,9 +1079,9 @@ button,
   * Remove the inner border and padding in Firefox.
   */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -1236,9 +1090,9 @@ button::-moz-focus-inner,
   * Restore the focus styles unset by the previous rule.
   */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -1256,12 +1110,19 @@ fieldset {
   *    `fieldset` elements in all browsers.
   */
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
 }
 
 /**
@@ -1282,17 +1143,20 @@ textarea {
   * 1. Add the correct box sizing in IE 10.
   * 2. Remove the padding in IE 10.
   */
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
 }
 
 /**
   * Correct the cursor style of increment and decrement buttons in Chrome.
   */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -1300,15 +1164,17 @@ textarea {
   * 1. Correct the odd appearance in Chrome and Safari.
   * 2. Correct the outline style in Safari.
   */
-[type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
 }
 
 /**
   * Remove the inner padding in Chrome and Safari on macOS.
   */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -1317,8 +1183,10 @@ textarea {
   * 2. Change font properties to `inherit` in Safari.
   */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
 }
 
 /* Interactive
@@ -1365,7 +1233,6 @@ select {
   /* reset */
   margin: 0;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1392,10 +1259,14 @@ button {
 
 p {
   display: block;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
 }
 
 /* ========================================================================================= */
@@ -1407,16 +1278,19 @@ p {
 .u-none {
   display: none !important;
 }
+
 @media (min-width: 1101px) {
   .u-none\@md {
     display: none !important;
   }
 }
+
 @media (min-width: 501px) and (max-width: 1100px) {
   .u-none\@sm {
     display: none !important;
   }
 }
+
 @media (min-width: 0px) and (max-width: 500px) {
   .u-none\@xs {
     display: none !important;
@@ -1428,6 +1302,8 @@ p {
     display: none !important;
   }
 }
+
 /* ========================================================================================= */
 /* END UTILITIES */
-/* ========================================================================================= *//*# sourceMappingURL=main.css.map */
+/* ========================================================================================= */
+/*# sourceMappingURL=main.css.map */
