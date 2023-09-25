@@ -429,6 +429,7 @@ header {
     grid-template-columns: [v1] 1fr [v2] 1fr [v3];
     grid-template-rows: [v1] 1fr [v2] 1fr [v3];
     padding-top: 50px;
+    justify-items: center;
   }
 }
 .c-content-title-logo__wrapper-item-logo {
