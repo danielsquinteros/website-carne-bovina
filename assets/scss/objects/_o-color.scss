@@ -1,6 +1,0 @@
-@each $nameColor, $color in $colors{
-    .o-color--#{$nameColor}{
-        color: var(--color-#{$nameColor})
-    }
-}
-

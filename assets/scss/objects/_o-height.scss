@@ -1,5 +1,0 @@
-@each $nameSize, $size in $sizes{
-    .o-height--#{$nameSize}{
-        height: $size;
-    }
-}

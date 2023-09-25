@@ -1,6 +1,0 @@
-@each $nameColor, $color in $colors{
-    .o-border-solid--#{$nameColor}{
-        border: 1px solid  var(--color-#{$nameColor});
-    }
-}
-

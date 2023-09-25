@@ -38,4 +38,43 @@
     &__content-right{
         width: 90%;
     }
+
+    &__wrapper-logos {
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+        @include md(){
+            display: grid;
+            grid-template-columns: [v1] 1fr [v2] 1fr [v3];
+            grid-template-rows: [v1] 1fr [v2] 1fr [v3];
+            padding-top: 50px;
+        }
+    }
+
+    &__wrapper-item-logo{
+        // cursor: pointer;
+        margin: 15px;
+        background: #ffffff;
+        height: 140px;
+        width: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        @include lg(){
+            height: 140px;
+            width: 140px;
+        }
+        @include md(){
+            margin: 0px 0px 30px 0px;
+        }
+    }
+    &__item-logo{
+        width: auto;
+        // height: auto;
+        height: 60px;
+        @include lg(){
+            height: 50px;
+        }
+    }
 }

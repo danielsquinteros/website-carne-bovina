@@ -1,5 +1,0 @@
-@each $nameOpacity, $opacity in $opacitys{
-    .o-opacity--#{$nameOpacity}{
-        opacity: $opacity;
-    }
-}
