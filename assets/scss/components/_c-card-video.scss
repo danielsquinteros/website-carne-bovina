@@ -1,0 +1,25 @@
+.c-card-video{
+    margin-bottom: 25px;
+    background-color: #131A20;
+    border-radius: 33px;
+    padding: 50px;
+    @include md(){
+        padding: 35px;
+
+    }
+    &__wrapper-video{
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        border-radius: 33px;
+        & iframe, object, embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -45,8 +45,7 @@ SEE OBJECTS/O-DIVIDER
 /* GENERIC */
 /* ========================================================================================= */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
@@ -55,7 +54,6 @@ html, body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  background: var(--color-white);
   height: auto;
 }
 
@@ -238,18 +236,16 @@ ol, ul {
 }
 
 .o-container {
-  width: 85%;
+  width: 80%;
   max-width: 1600px;
   display: block;
   margin: 0 auto;
 }
-
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   .o-container {
     width: 95%;
   }
 }
-
 .o-container--strong {
   margin-top: 20px;
   width: 94%;
@@ -275,7 +271,7 @@ ol, ul {
   width: 100%;
 }
 
-.base-font-primary, .o-font-primary-title-l1--light, .o-font-primary-title-l1--medium, .o-font-primary-title-l1--bold, .o-font-primary-title-l2--light, .o-font-primary-title-l2--medium, .o-font-primary-title-l2--bold, .o-font-primary-title-l3--light, .o-font-primary-title-l3--medium, .o-font-primary-title-l3--bold, .o-font-primary-title-l4--light, .o-font-primary-title-l4--medium, .o-font-primary-title-l4--bold, .o-font-primary-body-m--light, .o-font-primary-body-m--medium, .o-font-primary-body-m--bold, .o-font-primary-body-s--light, .o-font-primary-body-s--medium, .o-font-primary-body-s--bold, .o-font-primary-body-xs--light, .o-font-primary-body-xs--medium, .o-font-primary-body-xs--bold, .o-font-primary-body-xss--light, .o-font-primary-body-xss--medium, .o-font-primary-body-xss--bold {
+.base-font-primary, .o-font-primary-body-xss--bold, .o-font-primary-body-xss--medium, .o-font-primary-body-xss--light, .o-font-primary-body-xs--bold, .o-font-primary-body-xs--medium, .o-font-primary-body-xs--light, .o-font-primary-body-s--bold, .o-font-primary-body-s--medium, .o-font-primary-body-s--light, .o-font-primary-body-m--bold, .o-font-primary-body-m--medium, .o-font-primary-body-m--light, .o-font-primary-title-l4--bold, .o-font-primary-title-l4--medium, .o-font-primary-title-l4--light, .o-font-primary-title-l3--bold, .o-font-primary-title-l3--medium, .o-font-primary-title-l3--light, .o-font-primary-title-l2--bold, .o-font-primary-title-l2--medium, .o-font-primary-title-l2--light, .o-font-primary-title-l1--bold, .o-font-primary-title-l1--medium, .o-font-primary-title-l1--light {
   font-family: "Raleway", sans-serif;
   font-style: normal;
 }
@@ -288,13 +284,11 @@ ol, ul {
   line-height: 4.75rem;
   font-weight: 300;
 }
-
 .o-font-primary-title-l1--medium {
   font-size: 3.75rem;
   line-height: 4.75rem;
   font-weight: 500;
 }
-
 .o-font-primary-title-l1--bold {
   font-size: 3.75rem;
   line-height: 4.75rem;
@@ -306,34 +300,29 @@ ol, ul {
   line-height: 3.5625rem;
   font-weight: 300;
 }
-
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   .o-font-primary-title-l2--light {
     font-size: 2.125rem;
     line-height: 2.625rem;
   }
 }
-
 .o-font-primary-title-l2--medium {
   font-size: 3rem;
   line-height: 3.5625rem;
   font-weight: 500;
 }
-
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   .o-font-primary-title-l2--medium {
     font-size: 2.125rem;
     line-height: 2.625rem;
   }
 }
-
 .o-font-primary-title-l2--bold {
   font-size: 3rem;
   line-height: 3.5625rem;
   font-weight: bold;
 }
-
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   .o-font-primary-title-l2--bold {
     font-size: 2.125rem;
     line-height: 2.625rem;
@@ -345,13 +334,11 @@ ol, ul {
   line-height: 2.375rem;
   font-weight: 300;
 }
-
 .o-font-primary-title-l3--medium {
   font-size: 2rem;
   line-height: 2.375rem;
   font-weight: 500;
 }
-
 .o-font-primary-title-l3--bold {
   font-size: 2rem;
   line-height: 2.375rem;
@@ -363,55 +350,47 @@ ol, ul {
   line-height: 1.75rem;
   font-weight: 300;
 }
-
 @media (max-width: 1200px) {
   .o-font-primary-title-l4--light {
     font-size: 1.125rem;
     line-height: 1.4375rem;
   }
 }
-
-@media (max-width: 768px) {
+@media (max-width: 790px) {
   .o-font-primary-title-l4--light {
     font-size: 1rem;
     line-height: 1.2375rem;
   }
 }
-
 .o-font-primary-title-l4--medium {
   font-size: 1.375rem;
   line-height: 1.75rem;
   font-weight: 500;
 }
-
 @media (max-width: 1200px) {
   .o-font-primary-title-l4--medium {
     font-size: 1.125rem;
     line-height: 1.4375rem;
   }
 }
-
-@media (max-width: 768px) {
+@media (max-width: 790px) {
   .o-font-primary-title-l4--medium {
     font-size: 1rem;
     line-height: 1.2375rem;
   }
 }
-
 .o-font-primary-title-l4--bold {
   font-size: 1.375rem;
   line-height: 1.75rem;
   font-weight: bold;
 }
-
 @media (max-width: 1200px) {
   .o-font-primary-title-l4--bold {
     font-size: 1.125rem;
     line-height: 1.4375rem;
   }
 }
-
-@media (max-width: 768px) {
+@media (max-width: 790px) {
   .o-font-primary-title-l4--bold {
     font-size: 1rem;
     line-height: 1.2375rem;
@@ -429,13 +408,11 @@ ol, ul {
   line-height: 1.4375rem;
   font-weight: 300;
 }
-
 .o-font-primary-body-m--medium {
   font-size: 1.125rem;
   line-height: 1.4375rem;
   font-weight: 500;
 }
-
 .o-font-primary-body-m--bold {
   font-size: 1.125rem;
   line-height: 1.4375rem;
@@ -447,13 +424,11 @@ ol, ul {
   line-height: 1.25rem;
   font-weight: 300;
 }
-
 .o-font-primary-body-s--medium {
   font-size: 1rem;
   line-height: 1.25rem;
   font-weight: 500;
 }
-
 .o-font-primary-body-s--bold {
   font-size: 1rem;
   line-height: 1.25rem;
@@ -465,13 +440,11 @@ ol, ul {
   line-height: 1.125rem;
   font-weight: 300;
 }
-
 .o-font-primary-body-xs--medium {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 500;
 }
-
 .o-font-primary-body-xs--bold {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -483,13 +456,11 @@ ol, ul {
   line-height: 0.875rem;
   font-weight: 300;
 }
-
 .o-font-primary-body-xss--medium {
   font-size: 0.75rem;
   line-height: 0.875rem;
   font-weight: 500;
 }
-
 .o-font-primary-body-xss--bold {
   font-size: 0.75rem;
   line-height: 0.875rem;
@@ -682,11 +653,9 @@ ol, ul {
 .o-text-align--start {
   text-align: start;
 }
-
 .o-text-align--center {
   text-align: center;
 }
-
 .o-text-align--end {
   text-align: end;
 }
@@ -698,7 +667,6 @@ ol, ul {
 .o-visibility--hidden {
   visibility: hidden;
 }
-
 .o-visibility--visible {
   visibility: visible;
 }
@@ -871,6 +839,466 @@ ol, ul {
 /* ========================================================================================= */
 /* COMPONENTS */
 /* ========================================================================================= */
+header {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+@media (max-width: 510px) {
+  header {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.card-video-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1524px;
+  max-height: 800px;
+  overflow: hidden;
+  border-top-left-radius: 52px;
+  border-top-right-radius: 52px;
+  border-bottom-right-radius: 52px;
+  border-bottom-left-radius: 52px;
+  margin: 0px auto;
+}
+.card-video-content__wrapper-video {
+  position: relative;
+}
+@media (max-width: 790px) {
+  .card-video-content__wrapper-video {
+    display: none;
+  }
+}
+.card-video-content__video {
+  border-top-left-radius: 52px;
+  border-top-right-radius: 52px;
+  border-bottom-right-radius: 52px;
+  border-bottom-left-radius: 52px;
+  display: inline;
+  object-fit: contain;
+  position: relative;
+}
+.card-video-content__video-mobile {
+  border-top-left-radius: 52px;
+  border-top-right-radius: 52px;
+  border-bottom-right-radius: 52px;
+  border-bottom-left-radius: 52px;
+  height: 1200px;
+  object-fit: cover;
+}
+.card-video-content__wrapper-video-mobile {
+  display: none;
+}
+@media (max-width: 790px) {
+  .card-video-content__wrapper-video-mobile {
+    position: relative;
+    display: block;
+  }
+}
+.card-video-content__wrapper-content {
+  max-width: 1524px;
+  max-height: 800px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 40%;
+  height: 85%;
+  padding: 3dvh;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 2rem;
+  border-radius: 52px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+@media (min-width: 1300px) and (max-width: 1500px) {
+  .card-video-content__wrapper-content {
+    width: 40%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .card-video-content__wrapper-content {
+    width: 50%;
+  }
+}
+@media (min-width: 1050px) and (max-width: 1200px) {
+  .card-video-content__wrapper-content {
+    height: 80%;
+    width: 60%;
+  }
+}
+@media (min-width: 600px) and (max-width: 1050px) {
+  .card-video-content__wrapper-content {
+    height: 85%;
+    width: 92%;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    gap: 1rem;
+  }
+}
+@media (max-width: 790px) {
+  .card-video-content__wrapper-content {
+    height: 54%;
+    width: 92%;
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .card-video-content__wrapper-content {
+    height: 80%;
+  }
+}
+@media (max-width: 510px) {
+  .card-video-content__wrapper-content {
+    left: 0px;
+    gap: 1rem;
+    height: 94%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+  }
+}
+.card-video-content__content-title {
+  width: 70%;
+}
+@media (min-width: 1050px) and (max-width: 1200px) {
+  .card-video-content__content-title {
+    width: 100%;
+  }
+}
+@media (min-width: 600px) and (max-width: 1050px) {
+  .card-video-content__content-title {
+    width: 100%;
+  }
+}
+@media (max-width: 790px) {
+  .card-video-content__content-title {
+    width: 100%;
+  }
+}
+.card-video-content__content-subtitle {
+  width: 80%;
+}
+@media (min-width: 1050px) and (max-width: 1200px) {
+  .card-video-content__content-subtitle {
+    width: 90%;
+  }
+}
+@media (min-width: 600px) and (max-width: 1050px) {
+  .card-video-content__content-subtitle {
+    width: 90%;
+  }
+}
+@media (max-width: 790px) {
+  .card-video-content__content-subtitle {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  .card-video-content__content-subtitle {
+    max-height: 900px;
+    height: auto;
+  }
+}
+@media (max-width: 510px) {
+  .card-video-content__content-subtitle {
+    max-height: 900px;
+    height: auto;
+  }
+}
+
+.c-title-content-button {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+@media (max-width: 1024px) {
+  .c-title-content-button {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 0px 10px 0px 10px;
+  }
+}
+.c-title-content-button__title {
+  width: 39%;
+}
+@media (max-width: 1024px) {
+  .c-title-content-button__title {
+    width: 100%;
+  }
+}
+.c-title-content-button__wrapper-content {
+  padding-top: 45px;
+  display: grid;
+  grid-template-columns: [v1] 1fr [v2] 1fr [v3];
+}
+@media (max-width: 1024px) {
+  .c-title-content-button__wrapper-content {
+    grid-template-columns: [v1] 1fr [v2];
+  }
+}
+.c-title-content-button__wrapper-content-left {
+  width: 80%;
+}
+@media (max-width: 1024px) {
+  .c-title-content-button__wrapper-content-left {
+    width: 100%;
+  }
+}
+.c-title-content-button__wrapper-content-right {
+  width: 80%;
+}
+@media (max-width: 1024px) {
+  .c-title-content-button__wrapper-content-right {
+    width: 100%;
+  }
+}
+
+.c-items-icon {
+  padding-bottom: 50px;
+}
+@media (max-width: 1024px) {
+  .c-items-icon {
+    margin: 0px 10px 0px 10px;
+  }
+}
+.c-items-icon__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .c-items-icon__wrapper {
+    align-items: flex-start;
+  }
+}
+.c-items-icon__title {
+  text-align: center;
+  width: 60%;
+}
+@media (max-width: 1024px) {
+  .c-items-icon__title {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .c-items-icon__title {
+    text-align: start;
+    width: 100%;
+  }
+}
+.c-items-icon__wrapper-items {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  display: grid;
+  grid-template-columns: [v1] 1fr [v2] 1fr [v3] 1fr [v4];
+  grid-template-rows: [h1] 1fr [h2] 1fr [h3];
+  gap: 50px;
+}
+@media (max-width: 1024px) {
+  .c-items-icon__wrapper-items {
+    grid-template-columns: [v1] 1fr [v2] 1fr [v3];
+    grid-template-rows: [h1] 1fr [h2] 1fr [h3] 1fr [h4];
+  }
+}
+@media (max-width: 600px) {
+  .c-items-icon__wrapper-items {
+    gap: 40px;
+    grid-template-columns: [v1] 1fr [v2];
+    grid-template-rows: [h1] 1fr [h2] 1fr [h3] 1fr [h4] 1fr [h5];
+  }
+}
+.c-items-icon__item-title {
+  width: 80%;
+}
+@media (max-width: 1024px) {
+  .c-items-icon__item-title {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  .c-items-icon__item-title {
+    width: 100%;
+  }
+}
+
+.c-image {
+  border-radius: 33px;
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+}
+@media (max-width: 600px) {
+  .c-image {
+    height: 300px;
+  }
+}
+
+.c-content-title-logo {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+@media (max-width: 790px) {
+  .c-content-title-logo {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+}
+.c-content-title-logo__wrapper-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .c-content-title-logo__wrapper-title {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 790px) {
+  .c-content-title-logo__wrapper-title {
+    align-items: flex-start;
+  }
+}
+.c-content-title-logo__logo {
+  width: 230px;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 120px;
+}
+@media (max-width: 790px) {
+  .c-content-title-logo__logo {
+    margin-bottom: 60px;
+  }
+}
+.c-content-title-logo__content {
+  display: grid;
+  grid-template-columns: [v1] 1fr [v2] 1fr [v3];
+}
+@media (max-width: 790px) {
+  .c-content-title-logo__content {
+    grid-template-columns: [v1] 1fr [v2];
+  }
+}
+.c-content-title-logo__content-left {
+  width: 90%;
+}
+.c-content-title-logo__content-right {
+  width: 90%;
+}
+
+.c-card-title-content-button {
+  margin-bottom: 100px;
+  background-color: #131A20;
+  border-radius: 33px;
+  padding: 70px;
+}
+@media (max-width: 790px) {
+  .c-card-title-content-button {
+    padding: 35px;
+  }
+}
+
+.c-title-image {
+  padding-top: 50px;
+  padding-bottom: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: start;
+}
+@media (max-width: 1024px) {
+  .c-title-image {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 30px;
+  }
+}
+.c-title-image__wrapper-title {
+  width: 50%;
+}
+@media (max-width: 1024px) {
+  .c-title-image__wrapper-title {
+    width: 100%;
+  }
+}
+.c-title-image__wrapper-image {
+  width: 40%;
+  border-radius: 33px;
+}
+@media (max-width: 1024px) {
+  .c-title-image__wrapper-image {
+    margin-top: 50px;
+    width: 100%;
+  }
+}
+.c-title-image__image {
+  border-radius: 33px;
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+}
+.c-title-image__title {
+  width: 80%;
+}
+
+.c-card-video {
+  margin-bottom: 25px;
+  background-color: #131A20;
+  border-radius: 33px;
+  padding: 50px;
+}
+@media (max-width: 790px) {
+  .c-card-video {
+    padding: 35px;
+  }
+}
+.c-card-video__wrapper-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  border-radius: 33px;
+}
+.c-card-video__wrapper-video iframe, .c-card-video__wrapper-video object, .c-card-video__wrapper-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c-button {
+  background-color: #9CF1AF;
+  color: #05393D;
+}
+.c-button__wrapper-arrow {
+  background-color: #05393D;
+}
+.c-button:hover {
+  color: #9CF1AF;
+  background-color: #05393D;
+}
+~ .c-button:hover__wrapper-arrow {
+  background-color: #9CF1AF;
+}
+.c-button__svg-path {
+  fill: white;
+}
+
+body:has(.c-button:hover) .c-button__wrapper-arrow {
+  background-color: #9CF1AF;
+}
+body:has(.c-button:hover) .c-button__svg-path {
+  fill: #05393D;
+}
+
 /* ========================================================================================= */
 /* END COMPONENTS */
 /* ========================================================================================= */
@@ -885,10 +1313,8 @@ ol, ul {
 * 2. Prevent adjustments of font size after orientation changes in iOS.
 */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -923,13 +1349,9 @@ h1 {
   * 2. Show the overflow in Edge and IE.
   */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -937,10 +1359,8 @@ hr {
   * 2. Correct the odd `em` font sizing in all browsers.
   */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -958,13 +1378,9 @@ a {
   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
   */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -982,10 +1398,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -1035,14 +1449,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -1050,8 +1460,7 @@ textarea {
   * 1. Show the overflow in Edge.
   */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -1060,8 +1469,7 @@ input {
   * 1. Remove the inheritance of text transform in Firefox.
   */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -1069,9 +1477,9 @@ select {
   * Correct the inability to style clickable types in iOS and Safari.
   */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -1079,9 +1487,9 @@ button,
   * Remove the inner border and padding in Firefox.
   */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -1090,9 +1498,9 @@ button::-moz-focus-inner,
   * Restore the focus styles unset by the previous rule.
   */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -1110,19 +1518,12 @@ fieldset {
   *    `fieldset` elements in all browsers.
   */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -1143,20 +1544,17 @@ textarea {
   * 1. Add the correct box sizing in IE 10.
   * 2. Remove the padding in IE 10.
   */
-[type="checkbox"],
-[type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
   * Correct the cursor style of increment and decrement buttons in Chrome.
   */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -1164,17 +1562,15 @@ textarea {
   * 1. Correct the odd appearance in Chrome and Safari.
   * 2. Correct the outline style in Safari.
   */
-[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
   * Remove the inner padding in Chrome and Safari on macOS.
   */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -1183,10 +1579,8 @@ textarea {
   * 2. Change font properties to `inherit` in Safari.
   */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -1233,6 +1627,7 @@ select {
   /* reset */
   margin: 0;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1259,14 +1654,10 @@ button {
 
 p {
   display: block;
-  -webkit-margin-before: 0em;
-          margin-block-start: 0em;
-  -webkit-margin-after: 0em;
-          margin-block-end: 0em;
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 /* ========================================================================================= */
@@ -1278,19 +1669,16 @@ p {
 .u-none {
   display: none !important;
 }
-
-@media (min-width: 1101px) {
+@media (min-width: 600px) and (max-width: 1050px) {
   .u-none\@md {
     display: none !important;
   }
 }
-
 @media (min-width: 501px) and (max-width: 1100px) {
   .u-none\@sm {
     display: none !important;
   }
 }
-
 @media (min-width: 0px) and (max-width: 500px) {
   .u-none\@xs {
     display: none !important;
@@ -1302,8 +1690,6 @@ p {
     display: none !important;
   }
 }
-
 /* ========================================================================================= */
 /* END UTILITIES */
-/* ========================================================================================= */
-/*# sourceMappingURL=main.css.map */
+/* ========================================================================================= *//*# sourceMappingURL=main.css.map */
