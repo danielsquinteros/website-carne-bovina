@@ -63,12 +63,12 @@
         <div class="c-form">
           <form action="/success.html" class="c-form__wrapper-form" name="contact-carne-bovina" method="POST" netlify >
             <div class="pt-5">
-              <label for="name" class="block text-sm text-gray-100">Nombre completo</label>
+              <label for="input-name" class="block text-sm text-gray-100">Nombre completo</label>
               <input type="text" name="name" id="input-name" class="form-control block mt-2 w-full placeholder-gray-400/70 rounded-lg border px-5 py-2.5 border-gray-600 bg-black text-gray-300" />
               <p class="mt-1 text-small text-gray-600" id="help-name">Ingresa tu nombre completo</p>
             </div>
             <div class="pt-5">
-                <label for="phone" class="block text-sm text-gray-100">Número celular</label>
+                <label for="input-phone" class="block text-sm text-gray-100">Número celular</label>
                 <div class="flex items-center mt-2">
                     <p class="py-2.5 px-3 text-gray-200 bg-black border-gray-700 border border-r-0 rtl:rounded-r-lg rtl:rounded-l-none rtl:border-l-0 rtl:border-r rounded-l-lg">+56</p>
                     <input type="phone" name="phone" id="input-phone" class="form-control block w-full rounded-l-none rtl:rounded-l-lg rtl:rounded-r-none rounded-lg border px-5 py-2.5 text-gray-600 focus:ring focus:ring-blue-300 focus:ring-opacity-40 border-gray-600 bg-black dark:text-gray-300 focus:border-blue-300" />
@@ -76,7 +76,7 @@
                   <p class="mt-1 text-small text-gray-600" id="help-phone">Ingresa tu número celular</p>
             </div>
             <div class="pt-5">
-              <label for="email" class="block text-sm text-gray-100">Email</label>
+              <label for="input-email" class="block text-sm text-gray-100">Email</label>
               <input type="email" name="email" id="input-email" class="form-control block mt-2 w-full rounded-lg border px-5 py-2.5 focus:border-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-40 border-gray-600 bg-black text-gray-300 focus:border-blue-300" />
               <p class="mt-1 text-small text-gray-600" id="help-email">Ingresa tu correo</p>
             </div>
@@ -100,6 +100,11 @@
                 <option value="Minimarket">Minimarket</option>
                 <option value="Otro">Otro</option>
               </select>
+            </div>
+            <div class="pt-5 c-form__observation-none" id="wrapper-input-observation">
+              <label for="input-observation" class="block text-sm text-gray-100">¿Cuál grupo?</label>
+              <input type="text" name="observation" id="input-observation" class="form-control block mt-2 w-full rounded-lg border px-5 py-2.5 focus:border-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-40 border-gray-600 bg-black text-gray-300 focus:border-blue-300" />
+              <p class="mt-1 text-small text-gray-600" id="help-observation">Ingresa el grupo que te identifica más</p>
             </div>
             <button
               disabled

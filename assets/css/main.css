@@ -393,7 +393,7 @@ header {
   }
 }
 .c-content-title-logo__logo {
-  width: 230px;
+  width: 300px;
   height: auto;
   margin-top: 50px;
   margin-bottom: 120px;
@@ -588,6 +588,12 @@ body:has(.c-button:hover) .c-button__svg-path {
 }
 .c-form__success-right {
   border-radius: 10px 0px 0px 10px;
+}
+.c-form__observation-none {
+  display: none;
+}
+.c-form__observation-block {
+  display: block;
 }
 
 .c-success {

@@ -10,6 +10,8 @@ const fields = {
     email : false,
     phone : false,
     selected_group : false,
+    observation : false,
+    is_observation : false,
     is_completed_fields : false,
 }
 
@@ -17,6 +19,7 @@ const expression = {
 	name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	phone: /^\d{9,11}$/, // 8 a 11 numeros.
+	observation: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 }
 
 
@@ -41,6 +44,15 @@ const validarSelectGroup = (e) => {
         fields['selected_group'] = false;
         e.target.className = 'mt-1.5 w-full form-select rounded-lg bg-black border-gray-300 text-gray-300 sm:text-sm px-5 py-2.5 border border-red '
     }
+    if(value === 'Otro'){
+        fields.is_observation = true;
+        document.getElementById('wrapper-input-observation').classList.remove('c-form__observation-none');
+        document.getElementById('wrapper-input-observation').classList.add('c-form__observation-block');
+    } else {
+        fields.is_observation = false;
+        document.getElementById('wrapper-input-observation').classList.add('c-form__observation-none');
+        document.getElementById('wrapper-input-observation').classList.remove('c-form__observation-block');
+    }
 }
 
 const validarFormulario = (e) => {
@@ -53,6 +65,9 @@ const validarFormulario = (e) => {
         break;
         case "phone":
             validarCampo(expression.phone, e.target, e.target.name)
+        break;
+        case "observation":
+            validarCampo(expression.observation, e.target, e.target.name)
         break;
     }
 }
@@ -76,6 +91,7 @@ const validarCampo = (expresion, input, field) => {
         document.getElementById(`input-${field}`).classList.add('border-red');
         document.getElementById(`help-${field}`).classList.remove('text-gray-600');
         document.getElementById(`help-${field}`).classList.add('text-red');
+        fields[field] = false;
         // document.getElementById(`input-${field}`).classList.add('form-control is-invalid');
         // document.getElementById(`input-${field}`).classList.remove('form-control is-valid');
         // document.getElementById(`wrapper-${field}`).classList.add('c-form-page__wrapper-form-incorrect');
@@ -87,12 +103,17 @@ const validarCampo = (expresion, input, field) => {
 }
 
 const validateButton = () => {
-    if(fields.name && fields.email && fields.phone && fields.selected_group){
+    if(fields.name && fields.email && fields.phone && fields.selected_group && !fields.is_observation){
         buttonSend.removeAttribute("disabled");
         buttonSend.style.backgroundColor = '#ffffff';
     } else {
-        buttonSend.setAttribute("disabled", "");
-        buttonSend.style.backgroundColor = '#374151';
+        if(fields.is_observation && fields.observation){
+            buttonSend.removeAttribute("disabled");
+            buttonSend.style.backgroundColor = '#ffffff';
+        } else {
+            buttonSend.setAttribute("disabled", "");
+            buttonSend.style.backgroundColor = '#374151';
+        }
     }
 }
 
