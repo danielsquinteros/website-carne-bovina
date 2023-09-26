@@ -642,6 +642,31 @@ body:has(.c-button:hover) .c-button__svg-path {
   }
 }
 
+.c-contact {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+@media (max-width: 790px) {
+  .c-contact {
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
+}
+.c-contact__wrapper-contact {
+  display: grid;
+  grid-template-columns: [v1] 1fr [v2] 1fr [v3];
+}
+@media (max-width: 790px) {
+  .c-contact__wrapper-contact {
+    grid-template-columns: [v1] 1fr [v2];
+    gap: 40px;
+  }
+}
+.c-contact__link {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 /* ========================================================================================= */
 /* END COMPONENTS */
 /* ========================================================================================= */
