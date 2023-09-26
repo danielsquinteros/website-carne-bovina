@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carne Bovina - Región de Los Lagos</title>
-    <meta name="description" content="Descripción de la página web">
-    <meta name="keywords" content="Palabras claves">
+    <meta name="description" content="Únete al Programa Territorial Integrado (PTI) que Transforma la Ganadería, Impulsa la Calidad y Preserva Nuestras Tradiciones">
+    <meta name="keywords" content="Carne Bovina Región de Los Lagos">
     <link rel="shortcut icon" href="./assets/logo.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
@@ -33,17 +33,6 @@
                 small: '0.875rem',  //14px 
                 label: '0.75rem',   //12px 
             },
-            borderRadius:{
-                full: '2.625rem',   //42px 
-                xxxlarge: '2rem',   //32px 
-                xxlarge: '1.5rem',  //24px 
-                xlarge: '1.25rem',  //20px 
-                large: '1.125rem',  //18px 
-                normal: '1rem',     //16px 
-                small: '0.875rem',  //14px 
-                label: '0.75rem',   //12px 
-                xsmall: '0.625rem', //10px 
-            },
             fontWeight: {
                 light: '300',
                 medium: '500',
@@ -60,15 +49,73 @@
 </head>
 <body class="bg-black">
     <header>
-        <div class="flex justify-center mt-16 mb-16">
+        <div class="flex justify-center mt-16 mb-8">
             <a href="./index.html">
                 <img class="w-32" src="./assets/logo.png" alt="Logo"/>
             </a>
         </div>
     </header>
-    <main>
+    <main class="o-container">
+        <div class="md:flex md:items-center md:flex-col">
+            <h1 class="2xl:text-h2 font-bold text-white text-h3 text-center">Formulario de inscripción - PTI</h1>
+            <h2 class="font-light text-small text-white text-center md:w-4/5">Únete al Programa Territorial Integrado (PTI) que Transforma la Ganadería, Impulsa la Calidad y Preserva Nuestras Tradiciones</h2>
+        </div>
+        <div class="c-form">
+          <form class="c-form__wrapper-form" name="contact-carne-bovina" method="POST" data-netlify="true" >
+            <div class="pt-5">
+              <label for="name" class="block text-sm text-gray-300">Nombre completo</label>
+              <input type="text" name="name" id="input-name" class="form-control block mt-2 w-full placeholder-gray-400/70 rounded-lg border px-5 py-2.5 border-gray-600 bg-black text-gray-300" />
+              <p class="mt-1 text-small text-gray-600" id="help-name">Ingresa tu nombre completo</p>
+            </div>
+            <div class="pt-5">
+                <label for="phone" class="block text-sm text-gray-300">Número celular</label>
+                <div class="flex items-center mt-2">
+                    <p class="py-2.5 px-3 text-gray-200 bg-black border-gray-700 border border-r-0 rtl:rounded-r-lg rtl:rounded-l-none rtl:border-l-0 rtl:border-r rounded-l-lg">+56</p>
+                    <input type="phone" name="phone" id="input-phone" class="form-control block w-full rounded-l-none rtl:rounded-l-lg rtl:rounded-r-none rounded-lg border px-5 py-2.5 text-gray-600 focus:ring focus:ring-blue-300 focus:ring-opacity-40 border-gray-600 bg-black dark:text-gray-300 focus:border-blue-300" />
+                  </div>
+                  <p class="mt-1 text-small text-gray-600" id="help-phone">Ingresa tu número celular</p>
+            </div>
+            <div class="pt-5">
+              <label for="email" class="block text-sm text-gray-300">Email</label>
+              <input type="email" name="email" id="input-email" class="form-control block mt-2 w-full rounded-lg border px-5 py-2.5 focus:border-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-40 border-gray-600 bg-black text-gray-300 focus:border-blue-300" />
+              <p class="mt-1 text-small text-gray-600" id="help-email">Ingresa tu correo</p>
+            </div>
+            <div class="pt-5">
+              <label for="group" class="block text-sm text-gray-300">
+                ¿Qué grupo te identifica más?
+              </label>
+              <select
+                name="grupo"
+                id="group"
+                class="mt-1.5 w-full form-select rounded-lg bg-black border-gray-300 text-gray-300 sm:text-sm px-5 py-2.5 border border-gray-600"
+              >
+                <option value="">Seleccionar grupo</option>
+                <option value="Productor agricultor">Productor agricultor</option>
+                <option value="Faena">Faena</option>
+                <option value="Carnicería">Carnicería</option>
+                <option value="Horeca">Horeca</option>
+                <option value="Alimentación">Alimentación</option>
+                <option value="Institucional">Institucional</option>
+                <option value="Retail">Retail</option>
+                <option value="Minimarket">Minimarket</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <button
+              disabled
+              type="submit"
+              id="button-send" 
+              class="mt-10 text-center block w-full overflow-hidden rounded  rounded-lg px-8 py-3 text-black bg-gray-700"
+          >
+            <span class="text-sm font-bold">
+              ENVIAR
+            </span>
+          </button>
+        </form>
+       </div>
     </main>
     <footer>
     </footer>
+    <script src="./assets/js/validation-contact.js"></script>
 </body>
 </html>

@@ -7,9 +7,6 @@
     &:hover{
         color: #9CF1AF;
         background-color: #05393D;
-        ~&__wrapper-arrow {
-            background-color: #9CF1AF;
-        }
     }
     &__svg-path{
         fill: white;
