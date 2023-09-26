@@ -1,0 +1,37 @@
+.c-success{
+    padding-top: 50px;
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    &__wrapper-card{
+        width: 80%;
+        height: 580px;
+        display: flex;
+        justify-content: center;
+        background-color: #000000;
+        background-image: url("/assets/images/nature/image_1.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 52px;
+        @include md(){
+            width: 99%;
+        }
+    }
+    &__wrapper-wrapper-card{
+        margin: 40px;
+        border-radius: 52px;
+        background-color: rgba(9, 14, 18, 0.80);;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+        @include md(){
+            margin: 20px;
+            padding: 30px;
+        }
+    }
+}

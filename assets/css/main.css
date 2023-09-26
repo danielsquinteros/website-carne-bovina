@@ -82,7 +82,7 @@ header {
   position: relative;
   width: 100%;
   height: 100%;
-  max-width: 1824px;
+  max-width: 1724px;
   max-height: 820px;
   overflow: hidden;
   border-top-left-radius: 52px;
@@ -588,6 +588,48 @@ body:has(.c-button:hover) .c-button__svg-path {
 }
 .c-form__success-right {
   border-radius: 10px 0px 0px 10px;
+}
+
+.c-success {
+  padding-top: 50px;
+  padding-bottom: 150px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.c-success__wrapper-card {
+  width: 80%;
+  height: 580px;
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+  background-image: url("/assets/images/nature/image_1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 52px;
+}
+@media (max-width: 790px) {
+  .c-success__wrapper-card {
+    width: 99%;
+  }
+}
+.c-success__wrapper-wrapper-card {
+  margin: 40px;
+  border-radius: 52px;
+  background-color: rgba(9, 14, 18, 0.8);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+@media (max-width: 790px) {
+  .c-success__wrapper-wrapper-card {
+    margin: 20px;
+    padding: 30px;
+  }
 }
 
 /* ========================================================================================= */
