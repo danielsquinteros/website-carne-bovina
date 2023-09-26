@@ -354,6 +354,10 @@ header {
     width: 100%;
   }
 }
+.c-items-icon__icon {
+  height: 41px;
+  width: auto;
+}
 
 .c-image {
   border-radius: 33px;
