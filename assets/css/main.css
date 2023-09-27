@@ -378,7 +378,7 @@ header {
 @media (max-width: 790px) {
   .c-content-title-logo {
     padding-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   }
 }
 .c-content-title-logo__wrapper-title {
@@ -425,9 +425,9 @@ header {
 .c-content-title-logo__wrapper-logos {
   padding-top: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
-@media (max-width: 790px) {
+@media (max-width: 1200px) {
   .c-content-title-logo__wrapper-logos {
     display: grid;
     grid-template-columns: [v1] 1fr [v2] 1fr [v3];
@@ -439,12 +439,12 @@ header {
 .c-content-title-logo__wrapper-item-logo {
   margin: 15px;
   background: #ffffff;
-  height: 140px;
+  height: 100px;
   width: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 @media (max-width: 1024px) {
   .c-content-title-logo__wrapper-item-logo {
@@ -458,13 +458,11 @@ header {
   }
 }
 .c-content-title-logo__item-logo {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 15px;
   width: auto;
-  height: 60px;
-}
-@media (max-width: 1024px) {
-  .c-content-title-logo__item-logo {
-    height: 50px;
-  }
+  height: 80px;
 }
 
 .c-card-title-content-button {

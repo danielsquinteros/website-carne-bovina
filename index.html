@@ -53,6 +53,15 @@
                 center: true,
                 padding: '1rem',
             },
+            animation: {
+                    'infinite-scroll': 'infinite-scroll 50s linear infinite',
+            },
+            keyframes: {
+                'infinite-scroll': {
+                    from: { transform: 'translateX(0)' },
+                    to: { transform: 'translateX(-100%)' },
+                }
+            }    
           }
         }
     </script>
@@ -239,7 +248,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="c-content-title-logo__wrapper-logos">
+                <!-- <div class="c-content-title-logo__wrapper-logos">
                     <div class="c-content-title-logo__wrapper-item-logo">
                         <img class="c-content-title-logo__item-logo" src="./assets/images/logos/logo_agrollanquihue.png" alt="">
                     </div>
@@ -251,6 +260,124 @@
                     </div>
                     <div class="c-content-title-logo__wrapper-item-logo">
                         <img class="c-content-title-logo__item-logo" src="./assets/images/logos/logo_ulagos.jpeg" alt="">
+                    </div>
+                    <div class="c-content-title-logo__wrapper-item-logo">
+                        <img class="c-content-title-logo__item-logo" src="./assets/images/logos/logo_ulagos.jpeg" alt="">
+                    </div>
+                    <div class="c-content-title-logo__wrapper-item-logo">
+                        <img class="c-content-title-logo__item-logo" src="./assets/images/logos/logo_ulagos.jpeg" alt="">
+                    </div>
+                    <div class="c-content-title-logo__wrapper-item-logo">
+                        <img class="c-content-title-logo__item-logo" src="./assets/images/logos/logo_ulagos.jpeg" alt="">
+                    </div>
+                </div> -->
+                <div class="relative mt-[150px] mb-[50px] flex flex-col justify-center bg-black overflow-hidden">
+                    <div class="w-full">
+                        <div class="text-center">
+            
+                            <!-- Logo Carousel animation -->
+                            <div
+                                x-data="{}"
+                                x-init="$nextTick(() => {
+                                    let ul = $refs.logos;
+                                    ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                                    ul.nextSibling.setAttribute('aria-hidden', 'true');
+                                })"
+                                class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+                            >
+                                <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+                                    <li>
+                                        <img src="./assets/images/logos/logo_agrollanquihue.png" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_aproleche.png" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_coopred.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_corte.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_gore_core_horizontal_color.png" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_gannacop.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_ina.png" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_indap.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_mafrisur.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_odepa.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_redvacas.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_sag.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_sago.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_ulagos.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                </ul>                
+                                <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+                                    <li>
+                                        <img src="./assets/images/logos/logo_agrollanquihue.png" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_aproleche.png" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_coopred.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_corte.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_gore_core_horizontal_color.png" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_gannacop.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_ina.png" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_indap.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_mafrisur.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_odepa.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_redvacas.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_sag.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_sago.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/logos/logo_ulagos.jpeg" class="c-content-title-logo__item-logo" alt="Facebook" />
+                                    </li>
+                                </ul>                
+                            </div>
+                            <!-- End: Logo Carousel animation -->
+                            
+                        </div>
+            
                     </div>
                 </div>
             </div>
