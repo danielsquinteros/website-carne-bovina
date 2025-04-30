@@ -1,66 +1,47 @@
-# Base project for web pages
+# Astro Starter Kit: Minimal
 
-This template uses the BEMIT methodology complemented with SASS.
-
-The main.css.map file is automatically generated in:
-> assets / main.css
-
-
-# Fonts
-
-The font sizes are described in the following table:
-
-
-|SelectFont |Priority |Level  |Abbreviation|Size in PX  |Change Weight in: |
-|--|---|--|----|--|--|
-| ***/_o-font.scss line #2***|| | | | ***/_o-font.scss line #51***|
-|Primary| Title|Level 1 |l1|60px          | light
-|Primary| Title|Level 2 |l2|48px   |light
-|Primary| Title|Level 3 |l3|32px|light
-|Primary|Title|Level 4 |l4|22px|light
-|Primary|Body|Level M |m|18px|light
-|Primary|Body|Level S |s|16px|light
-|Primary|Body|Level XS |xs|14px|light
-|Primary|Body|Level XXS |xss|12px|light
-
-## **Example Nomeclature Font:**
-
-###   ⋅  Example 1
-
-```mermaid
-graph LR 
-o --- font-primary --- title --- l1 --- light
+```sh
+npm create astro@latest -- --template minimal
 ```
 
-*Result:*
-```html
-o-font-primary-title-l1--light
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
 ```
----
 
-### ⋅ Example 2
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-```mermaid
-graph LR 
-o --- font-secondary --- body --- m --- bold
-```
+Any static assets, like images, can be placed in the `public/` directory.
 
-*Result:*
-```
-o-font-secondary-body-m--bold
-```
+## 🧞 Commands
 
-# Media Queries
+All commands are run from the root of the project, from a terminal:
 
-These media queries are located up to an; Iphone 5 = **320px wide**.
-  It is important to consider that the media queries are for **desktop first**.
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-|Break Points | PX |
-|--|---|
-|XL| 1200|
-|LG| 1024|
-|MD| 768|
-|SM|576|
-|XS|480|
-|XXS|320|
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
